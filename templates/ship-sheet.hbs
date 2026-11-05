@@ -1,0 +1,249 @@
+<div class="ssc-sheet {{#if editMode}}is-edit{{else}}is-play{{/if}}">
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{#each tabs}}
+    <a class="{{cssClass}}" data-action="tab" data-group="{{group}}" data-tab="{{id}}">{{label}}</a>
+    {{/each}}
+  </nav>
+
+<section class="tab{{#if tabs.stats.active}} active{{/if}}" data-group="primary" data-tab="stats">
+
+  {{!-- Ship info + Structural Integrity --}}
+  <section class="ssc-card ssc-ship">
+    <div class="ssc-ship-top">
+      {{#if editMode}}
+      <img class="ssc-portrait is-editable" src="{{actor.img}}" alt="{{actor.name}}" data-edit="img" data-action="editImage">
+      <div class="ssc-title">
+        <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'SHIPSTATS.ShipName'}}">
+        <select name="system.shipClass">
+          {{selectOptions classChoices selected=system.shipClass}}
+        </select>
+        <label class="ssc-npc">
+          <input type="checkbox" name="system.isNPC" {{checked system.isNPC}}> {{localize "SHIPSTATS.NPCShip"}}
+        </label>
+      </div>
+      {{else}}
+      <img class="ssc-portrait" src="{{actor.img}}" alt="{{actor.name}}">
+      <div class="ssc-title">
+        <h1 class="ssc-name">{{actor.name}}</h1>
+        <span class="ssc-badge">{{className}}</span>
+      </div>
+      {{/if}}
+      {{#if canEdit}}
+      <button type="button" class="ssc-mode-toggle" data-action="toggleMode">
+        {{#if editMode}}
+        <i class="fa-solid fa-play"></i> {{localize "SHIPSTATS.PlayMode"}}
+        {{else}}
+        <i class="fa-solid fa-pen-to-square"></i> {{localize "SHIPSTATS.EditMode"}}
+        {{/if}}
+      </button>
+      {{/if}}
+    </div>
+
+    <div class="ssc-hull">
+      <div class="ssc-hull-row">
+        <span class="ssc-hull-label"><span class="ssc-heart">{{{@root.icons.heart}}}</span> {{localize "SHIPSTATS.Structure"}}</span>
+        <span class="ssc-hull-controls">
+          <button type="button" class="ssc-icon-btn" data-action="adjust" data-path="system.structure.value" data-delta="-1">{{{@root.icons.minus}}}</button>
+          <button type="button" class="ssc-icon-btn" data-action="adjust" data-path="system.structure.value" data-delta="1">{{{@root.icons.plus}}}</button>
+          {{#if editMode}}
+          <input class="ssc-num" type="number" name="system.structure.value" value="{{hull.value}}" min="0">
+          <span>/</span>
+          <input class="ssc-num" type="number" name="system.structure.max" value="{{hull.max}}" min="0">
+          {{else}}
+          <span class="ssc-hull-value">{{hull.value}} / {{hull.max}}</span>
+          {{/if}}
+        </span>
+      </div>
+      <div class="ssc-bar"><div style="width: {{hull.percent}}%"></div></div>
+      {{#unless editMode}}
+      <div class="ssc-hull-buttons">
+        <button type="button" class="ssc-damage" data-action="hull" data-mode="damage">{{{@root.icons.swords}}} {{localize "SHIPSTATS.TakeDamage"}}</button>
+        <button type="button" class="ssc-repair" data-action="hull" data-mode="repair">{{{@root.icons.wrench}}} {{localize "SHIPSTATS.RepairDamage"}}</button>
+      </div>
+      {{/unless}}
+    </div>
+  </section>
+
+  {{!-- Grouped stats: Defense / Weapons / Power / Mobility --}}
+  <section class="ssc-groups">
+    {{#each groups}}
+    <div class="ssc-card">
+      <h3 class="ssc-card-title">{{title}}</h3>
+      {{#each stats}}
+      <div class="ssc-stat-box{{#if disabled}} is-disabled{{/if}}" style="--ssc-color: {{color}}">
+        <div class="ssc-stat-head">
+          <span class="ssc-icon">{{{iconSvg}}}</span>
+          <span class="ssc-stat-label">{{label}}</span>
+          <span class="ssc-help" data-tooltip="{{tip}}" data-tooltip-direction="UP">{{{@root.icons.help}}}</span>
+        </div>
+
+        <div class="ssc-stat-body">
+          {{#if isPool}}
+            {{#if edit}}
+            <span class="ssc-pool-edit">
+              <input class="ssc-num" type="number" name="{{path}}.value" value="{{base}}" min="0">
+              <span>/</span>
+              <input class="ssc-num" type="number" name="{{path}}.max" value="{{baseMax}}" min="0">
+            </span>
+            {{else}}
+            <p class="ssc-value">{{value}}<span class="ssc-max"> / {{max}}</span></p>
+            {{/if}}
+            <span class="ssc-actions">
+              <button type="button" class="ssc-icon-btn is-large" data-action="adjust" data-path="{{path}}.value" data-delta="-1">{{{@root.icons.minus}}}</button>
+              <button type="button" class="ssc-icon-btn is-large" data-action="adjust" data-path="{{path}}.value" data-delta="1">{{{@root.icons.plus}}}</button>
+            </span>
+          {{else if isInitiative}}
+            <p class="ssc-value">{{value}}{{#if initiativeMod}}<span class="ssc-init-mod" data-tooltip="{{localize 'SHIPSTATS.InitiativeMod'}}">{{initiativeMod}}</span>{{/if}}{{#if lastRoll}}<span class="ssc-last-roll">= {{lastRoll}}</span>{{/if}}</p>
+            {{#unless edit}}
+            <span class="ssc-actions">
+              <button type="button" class="ssc-icon-btn is-large is-dice" data-action="roll" data-roll="initiative" title="{{localize 'SHIPSTATS.RollInitiative'}}">{{{@root.icons.dices}}}</button>
+            </span>
+            {{/unless}}
+          {{else if isDerived}}
+            <p class="ssc-value">{{value}}</p>
+            {{#if edit}}
+            <label class="ssc-committed">{{localize "SHIPSTATS.Committed"}}
+              <input class="ssc-num" type="number" name="system.energy.committed" value="{{committed}}" min="0">
+            </label>
+            {{/if}}
+          {{else}}
+            {{#if edit}}
+            <input class="ssc-num is-wide" type="number" name="{{path}}" value="{{base}}" min="0">
+            {{else}}
+            <p class="ssc-value">{{value}}{{#if hasHalf}}<span class="ssc-half">({{half}})</span>{{/if}}</p>
+            {{#if roll}}
+            <span class="ssc-actions">
+              <button type="button" class="ssc-icon-btn is-large is-dice" data-action="roll" data-roll="{{roll}}" title="{{localize 'SHIPSTATS.RollEvasion'}}">{{{@root.icons.dices}}}</button>
+            </span>
+            {{/if}}
+            {{/if}}
+          {{/if}}
+        </div>
+
+        {{#if notes.length}}
+        <div class="ssc-effect-notes">
+          {{#each notes}}<span>{{this}}</span>{{/each}}
+        </div>
+        {{/if}}
+
+        {{#if edit}}
+        <div class="ssc-mod">
+          <label class="ssc-mod-toggle">
+            <input type="checkbox" name="system.mods.{{key}}.active" {{checked modActive}}> {{localize "SHIPSTATS.Mod"}}
+          </label>
+          {{#if modActive}}
+          <input class="ssc-num is-wide" type="number" step="1" name="system.mods.{{key}}.value" value="{{modValue}}" placeholder="+/-">
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+    {{/each}}
+  </section>
+
+  {{!-- Modifications (one per stat) --}}
+  {{#if editMode}}
+  <section class="ssc-card">
+    <h3 class="ssc-card-title">{{localize "SHIPSTATS.Modifications"}} <span class="ssc-help" data-tooltip="{{localize 'SHIPSTATS.Tip.ModificationsEdit'}}" data-tooltip-direction="UP">{{{@root.icons.help}}}</span></h3>
+    {{#each modList}}
+    <div class="ssc-mod-field">
+      <label>{{label}}</label>
+      <input type="text" name="system.mods.{{key}}.text" value="{{text}}" placeholder="{{placeholder}}">
+    </div>
+    {{else}}
+    <p class="ssc-readonly ssc-hint">{{localize "SHIPSTATS.NoMods"}}</p>
+    {{/each}}
+  </section>
+  {{else if hasModifications}}
+  <section class="ssc-card">
+    <h3 class="ssc-card-title">{{localize "SHIPSTATS.Modifications"}} <span class="ssc-help" data-tooltip="{{localize 'SHIPSTATS.Tip.Modifications'}}" data-tooltip-direction="UP">{{{@root.icons.help}}}</span></h3>
+    <ul class="ssc-mod-list">
+      {{#each modList}}{{#if text}}
+      <li>{{text}}</li>
+      {{/if}}{{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{!-- Applied Effects --}}
+  <section class="ssc-card ssc-effects">
+    <div class="ssc-effects-header">
+      <h3 class="ssc-card-title">{{localize "SHIPSTATS.Effects"}} ({{activeEffects.length}})</h3>
+      <span class="ssc-effects-buttons">
+        {{#if editMode}}{{#if activeEffects.length}}
+        <button type="button" class="ssc-clear-effects" data-action="clearEffects">{{{@root.icons.trash}}} {{localize "SHIPSTATS.ClearEffects"}}</button>
+        {{/if}}{{/if}}
+        <button type="button" data-action="roll" data-roll="effects">{{{@root.icons.dices}}} {{localize "SHIPSTATS.RollEffects"}}</button>
+      </span>
+    </div>
+    {{#if activeEffects.length}}
+    <ul class="ssc-active-effects">
+      {{#each activeEffects}}
+      <li><strong>{{name}}</strong>: {{{details}}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    <details class="ssc-effects-list">
+      <summary>{{localize "SHIPSTATS.ChooseEffects"}}</summary>
+      <div class="ssc-effects-grid">
+        {{#each effects}}
+        <label class="ssc-effect">
+          <input type="checkbox" data-action="toggleEffect" data-key="{{key}}" {{checked active}}>
+          <span class="ssc-range">{{range}}</span> {{name}}
+        </label>
+        {{/each}}
+      </div>
+    </details>
+  </section>
+</section>
+
+<section class="tab{{#if tabs.actions.active}} active{{/if}}" data-group="primary" data-tab="actions">
+
+  {{!-- Actions tab --}}
+  <section class="ssc-card ssc-energy-summary">
+    <div class="ssc-energy-numbers">
+      <div><span>{{localize "SHIPSTATS.Available"}}</span><strong>{{actionsTab.available}}</strong></div>
+      <div><span>{{localize "SHIPSTATS.Allocated"}}</span><strong>{{actionsTab.allocated}}</strong></div>
+      <div class="is-remaining"><span>{{localize "SHIPSTATS.Unallocated"}}</span><strong>{{actionsTab.unallocated}}</strong></div>
+      <div class="{{#if actionsTab.overLimit}}is-over{{/if}}"><span>{{localize "SHIPSTATS.ActionsUsed"}}</span><strong>{{actionsTab.usedCount}} / {{actionsTab.limit}}</strong></div>
+    </div>
+    <p class="ssc-hint">{{localize "SHIPSTATS.AllocateHint"}}</p>
+    <button type="button" data-action="resetTurn">{{localize "SHIPSTATS.ResetTurn"}}</button>
+  </section>
+
+  <div class="ssc-roles">
+  {{#each actionsTab.roles}}
+  <section class="ssc-card ssc-role">
+    <header class="ssc-role-header">
+      <h3 class="ssc-card-title">{{name}}</h3>
+      <span class="ssc-role-energy">
+        <label>{{localize "SHIPSTATS.Energy"}}</label>
+        <button type="button" class="ssc-icon-btn" data-action="allocate" data-role="{{key}}" data-delta="-1">{{{@root.icons.minus}}}</button>
+        <input class="ssc-num" type="number" min="0" max="{{max}}" step="1" name="system.allocation.{{key}}" value="{{value}}">
+        <button type="button" class="ssc-icon-btn" data-action="allocate" data-role="{{key}}" data-delta="1">{{{@root.icons.plus}}}</button>
+        <button type="button" class="ssc-all-btn" data-action="allocate" data-role="{{key}}" data-delta="all" title="{{localize 'SHIPSTATS.AllocateAll'}}">{{localize "SHIPSTATS.All"}}</button>
+      </span>
+    </header>
+    <ul class="ssc-actions-list">
+      {{#each actions}}
+      <li class="ssc-action{{#if used}} is-used{{/if}}{{#if disabled}} is-disabled{{/if}}">
+        <label class="ssc-action-head">
+          <input type="checkbox" data-action="toggleAction" data-key="{{key}}" {{checked used}} {{#if disabled}}disabled{{/if}}>
+          <strong>{{name}}</strong>
+          <span class="ssc-cost">{{cost}}</span>
+        </label>
+        <p class="ssc-action-text">{{{details}}}</p>
+        {{#if rollable}}
+        <button type="button" class="ssc-roll-btn" data-action="rollAction" data-key="{{key}}" {{#if disabled}}disabled{{/if}}>{{{@root.icons.dices}}} {{#if rollLabel}}{{rollLabel}}{{else}}{{localize "SHIPSTATS.RollAction"}}{{/if}}</button>
+        {{/if}}
+        {{#if notes.length}}<div class="ssc-effect-notes">{{#each notes}}<span>{{this}}</span>{{/each}}</div>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/each}}
+  </div>
+</section>
+</div>

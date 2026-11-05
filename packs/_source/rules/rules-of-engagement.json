@@ -1,0 +1,403 @@
+{
+  "_id": "7564417100f7b531",
+  "_key": "!journal!7564417100f7b531",
+  "name": "Rules of Engagement",
+  "pages": [
+    {
+      "_id": "09431f9872a736e8",
+      "_key": "!journal.pages!7564417100f7b531.09431f9872a736e8",
+      "name": "Introduction",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The system uses multiple d12s. The default target number (TN) is 9; a success on the d12 means rolling 9 or higher; some effects or actions can raise or lower the TN.</p>\n<p>This system works best for two or three combatants in total. With more combatants, the (abstract) tactical map becomes more or less useless. It is therefore suggested, for large fleet battles, to use the optional rules <em>Fleets and Armadas</em>.</p>\n<p>This ruleset is meant to be a sort of mini-game to play out instead of a group check or Montage Test or the like; in most cases, for most groups, when wanting to portray ship-to-ship combat, <strong>it is better to have the players roll to overcome a series of obstacles, rather than to switch to this random mini-game.</strong></p>\n<p>If the GM wants extra complexity for the fun of it, by all means, use as much of this system as you dare.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "c19ced0baf43375e",
+      "_key": "!journal.pages!7564417100f7b531.c19ced0baf43375e",
+      "name": "Basic Rules",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Each combatant (i.e., each ship) can take up to three actions per round, assigned to up to three different positions. Each position has access to a specific set of actions.</p>\n<p>You cannot use the same action more than once in a single round, except for the <em>Maneuver</em> action.</p>\n<p>At the start of a battle (beginning of the encounter) the GM announces the opponents (including the hero ship) and briefly establishes some details: ship class, name, any other noticeable factor. The GM then places tokens on the map for enemy ships. The GM can either choose each ship’s starting position or roll for it: roll 1d4 for range (1 = Short, 4 = Extreme) and 1d8 for sector (result = sector number).</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>The term <em>“hero ship”</em> is used to mean the vessel the players control, even if said players are dastardly scoundrels.</p>\n</div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "5ec99d25b47bc124",
+      "_key": "!journal.pages!7564417100f7b531.5ec99d25b47bc124",
+      "name": "Glossary",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th><em>Term</em></th>\n<th><em>Definition</em></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>TN</td>\n<td>The target number. A success on the d12 means rolling this number or higher. By default, TN = 9.</td>\n</tr>\n<tr>\n<td>Expend</td>\n<td>Roll dice and use the successes this round.</td>\n</tr>\n<tr>\n<td>Commit</td>\n<td>Set dice aside. They cannot be used again until they complete their commitment.</td>\n</tr>\n<tr>\n<td>Sacrifice</td>\n<td>Remove dice for the rest of the round; they aren’t rolled and count as automatic successes.</td>\n</tr>\n<tr>\n<td>Decrement</td>\n<td>Decrease by 1.</td>\n</tr>\n<tr>\n<td>Increment</td>\n<td>Increase by 1.</td>\n</tr>\n<tr>\n<td>Evasion</td>\n<td>Avoid enemy attacks. It is automatic and requires no crew action—just an Evasion roll. Each success cancels one of the enemy sacrificed dice.</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "fbe001b55a5569cf",
+      "_key": "!journal.pages!7564417100f7b531.fbe001b55a5569cf",
+      "name": "Offense",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h3 id=\"volley\">Volley</h3>\n<p>This represents the number of broadside weapons, the basic armament, your ship has available. The type of weapon is more or less irrelevant. Mundane ballistae or cannons or—depending on your setting—magic guns or photonic blasters are all, mechanically, the same: <strong>Volley</strong>.</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>It’s worth mentioning that <strong>Volley</strong> technically represents the weapons on only one side of the ship; see @UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.139524f3f175a49f#range-and-weapon-facing]{Range and Weapon Facing} for more details.</p>\n</div>\n<p>When attacking with your <strong>Volley</strong>, you expend <strong>Energy</strong> dice up to the number of weapons available: your <strong>Volley</strong> stat.</p>\n<p>Ammunition (ammo) or charge for your <strong>Volley</strong> weapons is always assumed to be plentiful. By default, each weapon deals 1 point of damage. Modifications to the <strong>Volley</strong> can increase this damage or add a special effect—for instance, incendiary rounds. See <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.9307b0208f519611]{Modifications}</em> for further details on options for ammo or weapons.</p>\n<h3 id=\"prime\">Prime</h3>\n<p><strong>Prime</strong> weaponry is something else. You can only have one <strong>Prime</strong> weapon—unless you have the <em>Weapons platform</em> modification (see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.9307b0208f519611]{Modifications}</em>). The <strong>Prime</strong> stat represents the number of ammo or charge for the weapon you have. In other words, the <strong>Prime</strong> stat is the maximum number of times this weapon can be used in a battle.</p>\n<p>In general, the <strong>Prime</strong> weapon deals 5 damage if at least one of the attack dice remains after the enemy’s defense.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9d6924ba07424b8e",
+      "_key": "!journal.pages!7564417100f7b531.9d6924ba07424b8e",
+      "name": "Defense",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>There are two ways to defend against attacks: evasion (or dodging) and armour (or shielding).</p>\n<h3 id=\"evasion\">Evasion</h3>\n<p>To evade, roll up to your ship’s <strong>Evasion</strong> dice. <strong>Evasion</strong> dice are independent from the <strong>Energy</strong> pool. Each success cancels one incoming hit—one <strong>Evasion</strong> success cancels one enemy <em>Attack</em> dice. The <strong>Evasion</strong> number typically corelates to the <strong>Maneuverability</strong> stat, often both being equal before modifications.</p>\n<h3 id=\"armour\">Armour</h3>\n<p>You may add your full <strong>Armour</strong> value to the Evasion roll. If <strong>Armour</strong> is depleted, you can only rely on <strong>Evasion</strong>.</p>\n<p><strong>Armour</strong> automatically cancels a number of attacks equal to the its value, decrementing that value after the attack is resolved.</p>\n<p><strong>Armour</strong> can be repaired or replenished in dry dock.</p>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The (hero) pirate ship—pardon me—the <em>privateer</em> frigate The <em>Jolly Drunk</em> is being attacked by a navy vessel. The enemy fires their main guns (8 Volley); the <em>Jolly Drunk</em> needs to defend against 8 dice.</p>\n<p>The players choose to use their Armour (4) and make a hard maneuver (4 Evasion). The <em>Jolly Drunk</em> thus rolls 4d12 and they get 2 successes. The ship only takes 2 points of damage (damage received = 8 attack − 4 Armour − 2 Evasion successes = 2 damage).</p>\n<p>The players then decrement their Armour to 3 (4 Armour − 1 = 3 Armour).</p>\n</blockquote>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "139524f3f175a49f",
+      "_key": "!journal.pages!7564417100f7b531.139524f3f175a49f",
+      "name": "Mobility and Ranges",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Refer to the graphs below. The ranges and movements are abstract. By design, the exact measurements are not relevant to the mechanics.</p>\n<div class=\"ssc-graphs\" style=\"display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin:.75rem 0\">\n<figure style=\"flex:1 1 240px;max-width:420px;margin:0;text-align:center\"><img class=\"is-dark\" style=\"width:100%;height:auto;border-radius:8px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);background:#000\" src=\"modules/ship-stats-card/assets/tactical-graph-dark.webp\" alt=\"Tactical graph, white on black\"><figcaption style=\"font-size:.8rem;opacity:.7\">Dark</figcaption></figure>\n<figure style=\"flex:1 1 240px;max-width:420px;margin:0;text-align:center\"><img class=\"is-light\" style=\"width:100%;height:auto;border-radius:8px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);background:#fff\" src=\"modules/ship-stats-card/assets/tactical-graph-light.webp\" alt=\"Tactical graph, black on white\"><figcaption style=\"font-size:.8rem;opacity:.7\">Light</figcaption></figure>\n</div>\n<p>In the graphs, The central arrow shows your ship and its heading; its size is exaggerated to represent Immediate range. Immediate range means walking or jumping distance. Depending on the context or setting, it might mean larger distances in the order of a few or even several dozen metres. The other ranges are progressively larger, of course.</p>\n<p>The diagrams are velocity‑relative: they show the position of opponents relative to one another while both are in motion. Because the map is relative, a 2D graph is sufficient to represent up to three combatants (including the hero ship) even for three‑dimensional movement.</p>\n<p>Because of these simplifications, the ship can “move” in any direction. Moving in (or closing distance) and moving out (or making distance) keep you in the same numbered sector but change the range by one step. For instance, if an opponent is at Medium range and you move in, the opponent (represented by a token of your choice on the tactical graph) will then appear at Short range. If you moved out instead, the opponent would appear at Long range within the same slice—called sector—of the circle graph.</p>\n<h3 id=\"movement-in-battle\">Movement in Battle</h3>\n<p>You may perform up to two maneuvers as part of a single action. You can use the same maneuver twice in one round. You may split the action across other actions (e.g., perform a maneuver, take another action, then perform a second maneuver).</p>\n<p>You can move in <strong><em>or</em></strong> move out <strong><em>or</em></strong> you can shift sector as one maneuver. In other words, you can change the distance to the enemy and you can rotate the ship in one direction as part of the same action. “Diagonal movement” therefore is achieved by using both maneuvers.</p>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The <em>Jolly Drunk</em> takes the <em>Maneuver</em> action. The crew decides to move in to reach their weapons’ effective range, attack, and then retreat by moving out. This sequence involves two actions: one maneuver to move in, one maneuver to move out (one action) and one action to attack.</p>\n</blockquote>\n<p>When tracking two opponents beside the hero ship, you need to consider multiple sectors. Adjacent cells within the same range circle are classified as Short range from one another, while two cells apart are at Medium range. Additionally, the distance between range circles is also treated as short range. This means that “diagonally” adjacent cells are two range steps apart, or Medium range.</p>\n<h3 id=\"maneuverability\">Maneuverability</h3>\n<p>The <strong>Maneuverability</strong> stat represents the distance the ship can travel during a complete movement <em>action</em>. In other words, all maneuvers combined must not exceed this number.</p>\n<p>You can move more than one range step or one sector in a single maneuver, as long as it stays within your <strong>Maneuverability</strong> limit.</p>\n<p>When controlling an NPC enemy ship, they can only move in or move out by at most half of their <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.139524f3f175a49f#maneuverability]{Maneuverability}</em> (rounded down) range steps and they cannot shift sector on their own—since shifting sector represents turning the hero ship, not moving in that direction.</p>\n<h3 id=\"initiative\">Initiative</h3>\n<p>At the start of each round, each combatant rolls their initiative dice. Refer to the classification table below. This roll is not an action. The lower roll acts first; tied rolls are re-rolled between the tied parties until the tie is broken.</p>\n<table>\n<thead>\n<tr>\n<th><em>Ship Class</em></th>\n<th><em>Initiative Dice</em></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Battleship</td>\n<td>2d12</td>\n</tr>\n<tr>\n<td>Cruiser</td>\n<td>2d10</td>\n</tr>\n<tr>\n<td>Frigate</td>\n<td>2d8</td>\n</tr>\n<tr>\n<td>Corvette</td>\n<td>2d6</td>\n</tr>\n<tr>\n<td>Destroyer</td>\n<td>2d4</td>\n</tr>\n<tr>\n<td>Most hero ships will be classified as Destroyers or Corvettes, maybe a Frigate if you want a larger NPC crew aboard. It’s uncommon for PCs to command a Cruiser or Battleship (or equivalents) for long stretches—maybe for a single special battle. That said, the rules don’t <em>forbid</em> the heroes from piloting a Battleship with a three‑person crew. Go wild.</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<p>Combatants may take up to three actions in any order during their turn. If a combatant cannot take any action, they simply lose their turn and play passes to the next combatant in initiative.</p>\n<h3 id=\"range-and-weapon-facing\">Range and Weapon Facing</h3>\n<p>Using directional weapons, your ship will usually have axial symmetry, which is the basis for this system. The <strong>Volley</strong> section of the ship’s stat card indicates the number of weapons on one side of the ship.</p>\n<p>Default weapons (that is, unmodified weapons) can target an arc spanning three sectors: the starboard side weapons can fire at targets in sectors 2, 3, or 4, while the port side weapons can engage targets in sectors 6, 7, or 8. This means you cannot fire towards the stern or bow—also known as aft and fore—in sectors 1 and 5, respectively.</p>\n<p>Default weapons have an effective range of Medium. This means there are no penalties for firing at that distance or closer. However, if you fire from a further distance, the target number (TN) for the enemy’s Evasion roll decreases by 2 for each additional range step. For example, if you fire at a ship positioned at Long range while your weapons have a Medium effective range, the TN for their Evasion roll will be 7.</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>You’re encouraged to use the graph and movement rules for tactical positioning to enhance your combat experience. This suggests your weapons occupy a physical space on your ship and face specific directions. However, if you prefer a simpler experience, you <em>can</em> mostly disregard the graph and focus solely on ranges, using just one sector.</p>\n</div>\n<p>In the event you have enemies on both sides of the ship, remember you can use the <em>Attack</em> action twice, but only once per ship side. You can fire your starboard weapons (first action) and then fire your port weapons (second action)—or vice versa, of course.</p>\n<p><strong>Prime weapons</strong>, unless stated otherwise, are oriented towards the stern and bow (sectors 1 and 5), but you can only fire one direction at a time, just like standard weapons. This is a simplification designed to keep the stats and calculations straightforward.</p>\n<h3 id=\"ramming\">Ramming</h3>\n<p>Yes, ramming. Although it’s not a recommended tactic or indeed a useful one in most cases, it can be fun and dramatic to “CHARGE!” the enemy or to have a player call out: “Prepare for ramming speed!”</p>\n<p>Therefore, you can attempt to ram and opponent if they are directly in front of your ship (in sector 1). In order to successfully ram, announce your intention and Commit dice for the ramming, up to your <strong>Maneuverability</strong>; the ramming will be considered a variant of the <em>Attack</em> action upon contact.</p>\n<p>When attacking in this way (i.e., at the moment of contact), the opponent will evade as usual, removing a number of ramming dice equal to their Evasion roll successes. Each remaining dice deals 1 damage to the enemy and 1 to your own ship. After resolving that damage, roll the remaining committed dice (Expend them), with the TN increased by 1 for each range step above Short range. Specifically, Short range ramming has a TN of 9 (standard); Medium range has a TN of 10; Long range has a TN of 11; Extreme range has a TN of 12. Each success deals an additional 5 points of damage to the enemy. If your ship’s <strong>Structural Integrity</strong> reaches 0 from the initial impact, it is destroyed resulting in no further damage to the enemy.</p>\n<hr>\n<h4 id=\"ramming-action\">Ramming Action</h4>\n<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Attack<br>(Ramming)</td>\n<td>The target must be in sector 1.<br>Commit up to your <strong>Maneuverability</strong>.<br>At the moment of contact, the target first evades, removing a number of ramming dice equal to their Evasion successes; each remaining dice deals 1 damage to both ships.<br>Then expend the remaining committed dice (Short TN 9, Medium TN 10, Long TN 11, Extreme TN 12), with each success adding 5 damage to the enemy.<br>(If your ship’s Structural Integrity drops to 0 from the initial impact, it is destroyed and no further damage is applied to the enemy.)</td>\n<td>Commit up to [<strong>Maneuverability</strong>],<br>over multiple rounds</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The <em>Jolly Drunk</em> is badly damaged. In desperation, its crew decides to ram the enemy navy ship staring them down straight ahead, to bow. They loudly declare, “All speed ahead!”\nThey are at Long range now; they start the round by committing all of their Maneuverability dice to the ramming, making a pool of 4 dice. The enemy ship notices that and, in the next round, they move out to Extreme range. The <em>Jolly Drunk</em>’s crew decide to move closer before attacking; they maneuver into Long range again. The third round, the crew moves in again; the enemy does not move. The fourth round, the navy ship moves first and closes the gap to fire their Prime weapons; the <em>Jolly Drunk</em> is now at Short range and the crew decides to commit one more round of dice; the ramming pool is now 8 dice. The fifth round, the <em>Jolly Drunk</em> manages to act first: they ram. The navy ship evades against 8 dice, managing 3 successes; 5 ramming dice remain. The crew of the <em>Jolly Drunk</em> roll their ramming dice and get 4 successes. They deal a total of 25 damage to the enemy (5 ramming dice + 4 successes × 5), and they take 5 damage to their own ship, rendering them barely capable of floating, let alone seaworthy.</p>\n</blockquote>\n<h3 id=\"boarding\">Boarding</h3>\n<p>If you want to board the enemy ship, it must be within Short range and a special <em>Boarding</em>\naction will be used (variant of the <em>Attack</em> action). Conversely, you can be boarded under the same conditions.</p>\n<hr>\n<h4 id=\"boarding-action\">Boarding Action</h4>\n<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Attack<br>(Boarding)</td>\n<td>The target must be within Short range. Sacrifice up to <strong>Volley</strong> to initiate the attack, which triggers an Evasion roll from the target. Each success on their roll cancels <strong>two</strong> of your sacrificed dice.<br>While the attack itself deals no damage, if you have any dice remaining in your attack pool after the enemy’s defense, you can board the enemy ship.</td>\n<td>Sacrifice up to [<strong>Volley</strong>]</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<p>When boarding, move some or all of your characters to the boarded ship. You then have two options:</p>\n<ol>\n<li>You can transition to character combat (according to your setting and normal ruleset).</li>\n<li>The boarded ship capitulates, ending any ongoing effect or damage over time and the crew of the boarded ship is effectively disarmed.</li>\n</ol>\n<p>Either way, the ship-to-ship combat that this ruleset represents should end.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8bc830cea6cfba5c",
+      "_key": "!journal.pages!7564417100f7b531.8bc830cea6cfba5c",
+      "name": "Power",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h3 id=\"energy\">Energy</h3>\n<p><strong>Energy</strong> is represented by a pool of d12s that refreshes each round. Any <strong>Energy</strong> unused by the end of the round is lost. The amount of <strong>Energy</strong> you have is based on the ship’s <strong>Systems</strong>. If the <strong>Systems</strong> value decreases during battle, your <strong>Energy</strong> will decrease as well; this takes effect on your next turn.</p>\n<p>Dice that have been committed won’t refresh and return to the pool until they’ve fulfilled that commitment. You may have more dice committed than your maximum <strong>Energy</strong>.</p>\n<p>The default amount of <strong>Energy</strong> your ship has available is equal to 3 times your <strong>Systems</strong>.</p>\n<h3 id=\"systems\">Systems</h3>\n<p>This number reflects the ship’s overall worthiness. If it reaches 0, the ship can no longer function. In this case, the ship isn’t destroyed, but it’s severely damaged and would need major repairs to be operational again.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9307b0208f519611",
+      "_key": "!journal.pages!7564417100f7b531.9307b0208f519611",
+      "name": "Modifications",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Modifications can be anything and everything. Nearly every rule can be tweaked, amended, or completely rewritten by modifications (or mods). All ships have 8 maximum modifications, but the size, shape, or weight of the mod is irrelevant (unless you want it to be). You can only have one mod per ship stat. You can only modify your <strong>Volley</strong> one way, you can only modify your <strong>Energy</strong> output in a certain way, and so on. For instance, if you have a mod for your <strong>Volley</strong> that increases damage, you cannot also have a mod that extends the range of the <strong>Volley</strong>.</p>\n<p>None of these modifications are proscriptive. Feel free to come up with new mods or to change the ones offered here. Always discuss with your group which mods they would like and how they want them—ergo, whether they want to buy it, build it, steal it, or anything else. It has no mechanical impact, but it can be an interesting goal to work towards.</p>\n<p>Here are examples modifications:</p>\n<table>\n<thead>\n<tr>\n<th><strong><em>Modification</em></strong></th>\n<th><strong>Description</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><em>Multiple magazines</em></td>\n<td>You can store two types of ammo for your <strong>Volley</strong>. Once per turn, you can swap which ammo you are using (no action required). (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Big bullets</em></td>\n<td>Your <strong>Volley</strong> deal +1 damage per hit. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Long range</em></td>\n<td>Your <strong>Volley</strong> have an effective range of Long. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Gimbals</em></td>\n<td>Your main <strong>Volley</strong> are mounted on gimbals, allowing them more freedom of motion; you can fire in any sector. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Penetrating bullets</em></td>\n<td>Perforating: +2 damage per hit. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Weapons platform</em></td>\n<td>You can have one other <strong>Prime</strong> weapon type. It shares ammunition with the one you already have, increasing the <strong>Prime</strong> stat by 5. The effects of both weapons may be different. (<strong>Prime weapon</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Fast sails</em></td>\n<td>Increase your <strong>Maneuverability</strong> by 2. (<strong>Maneuverability</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Steady centerboard</em></td>\n<td>Increase your <strong>Evasion</strong> by 2. (<strong>Evasion</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Heavy armour</em></td>\n<td>Increase your <strong>Armour</strong> by 4, decrease your <strong>Evasion</strong> by 4. (<strong>Armour</strong> mod)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 800000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "088bdec1cccb0594",
+      "_key": "!journal.pages!7564417100f7b531.088bdec1cccb0594",
+      "name": "Damage",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>When you receive damage, you choose to either apply points of damage to the <strong>Structural Integrity</strong> of the ship or to forgo damage to instead decrement the <strong>Systems</strong> value. If a section or a system has been targeted, however, you <em>must</em> apply the effect to the appropriate section.</p>\n<p>If the damage taken reduces the <strong>Structural Integrity</strong> to 0, the ship is destroyed. Furthermore, whenever the ship takes 10 points of damage or more in a single salvo, roll on the Effects Table (see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.088bdec1cccb0594#effects-table]{Effects Table}</em> below). If a system has been targeted, you must roll on the Effects Table and decrement the <strong>Systems</strong>.</p>\n<h3 id=\"effects-table\">Effects Table</h3>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p><strong>Foundry:</strong> roll this table from the Ship Combat Tables compendium (@UUID[Compendium.ship-stats-card.tables.RollTable.0855917242343b9c]{Effects Table}), or use the <em>Roll Effects Table</em> button on a ship's sheet, which also ticks the result under Applied Effects.</p>\n</div>\n<table>\n<thead>\n<tr>\n<th>#</th>\n<th>Effect</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>01‑08</td>\n<td>Debris</td>\n<td>Repairs are made difficult by debris. Expend twice the number of <strong>Energy</strong> dice to repair structural damage.</td>\n</tr>\n<tr>\n<td>09‑16</td>\n<td>Sluggish response</td>\n<td>The crew is disorientated. + 2 to <strong>Initiative</strong>.</td>\n</tr>\n<tr>\n<td>17‑24</td>\n<td>Skewed balance</td>\n<td>The ship is unbalanced, slowly tilting and drifting. − 2 <strong>Evasion</strong> while the effect persists.</td>\n</tr>\n<tr>\n<td>25‑32</td>\n<td>Impaired defense</td>\n<td>You cannot use <strong>Armour</strong> when defending.</td>\n</tr>\n<tr>\n<td>33‑40</td>\n<td>Weapons instability</td>\n<td>If not repaired, the next attack decrements your <strong>Volley</strong>. Stacks until repaired or minimum of 1 <strong>Volley</strong>.</td>\n</tr>\n<tr>\n<td>41‑48</td>\n<td>Volley weapons malfunction</td>\n<td>The weapons are damaged and require more energy than they should. Sacrifice 2 additional <strong>Energy</strong> dice when firing <strong>Volley</strong> (that do not count as attack dice).</td>\n</tr>\n<tr>\n<td>49‑56</td>\n<td>Prime weapons misfire</td>\n<td><strong>Prime</strong> weapons may fail to launch. For each dice sacrificed to the attack, roll it (TN 7). On a failed launch (1–6), the ship takes 5 damage and the weapon deals no effect to the target.</td>\n</tr>\n<tr>\n<td>57‑64</td>\n<td>Blindspot</td>\n<td>Your aim is off. <em>Enemy Evasion</em> TN − 2.</td>\n</tr>\n<tr>\n<td>65‑71</td>\n<td>Explosion/Fire</td>\n<td>At the start of your next turn, inflict 1 damage initially, incrementing the damage each subsequent round until the issue is resolved.; in essence, apply 1 damage in the first round, 2 damage in the second round, 3 damage in the third round, and so on.</td>\n</tr>\n<tr>\n<td>72‑78</td>\n<td>Lethargic maneuvering</td>\n<td>The <em>Maneuver</em> action costs 2 actions.</td>\n</tr>\n<tr>\n<td>79‑85</td>\n<td>Rudder jammed</td>\n<td>The maneuvering system (the rudder) is jammed (or stuck). You cannot use the <em>Maneuver</em> action.</td>\n</tr>\n<tr>\n<td>86‑92</td>\n<td>Leaking energy</td>\n<td>Sacrifice 5 <strong>Energy</strong> dice per round until repaired.</td>\n</tr>\n<tr>\n<td>93‑99</td>\n<td>Haemorrhaging energy</td>\n<td>The sails—or reactors—are badly damaged; you can only get half the <strong>Energy</strong> you should (rounded down).</td>\n</tr>\n<tr>\n<td>00 (100)</td>\n<td>Critical damage</td>\n<td>The ship cannot move and is falling out of the sky, is taking on water, is dead in space, etc. <em>Terminal damage.</em></td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 900000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "32383b60e8a077d7",
+      "_key": "!journal.pages!7564417100f7b531.32383b60e8a077d7",
+      "name": "Actions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Allocate Energy</td>\n<td><strong><em>Mandatory action on your turn, each round</em></strong>. This does not count towards your action limit.<br>Distribute <strong>Energy</strong> to each Position you want to take action. Any <strong>Energy</strong> dice that haven’t been used <strong><em>by the end of the round</em></strong> are lost. <strong>Energy</strong> dice <em>that have not been committed</em> are refreshed at the start of each round.</td>\n<td>—</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1000000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "a7e9f57b160dae00",
+      "_key": "!journal.pages!7564417100f7b531.a7e9f57b160dae00",
+      "name": "Captain / Engineer",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Overwork the Crew</td>\n<td>Increase the available <strong>Energy</strong> dice. Roll all the available <strong>Energy</strong> dice; each success is an extra <strong>Energy</strong> dice you can distribute immediately. Doing so decrements <strong>Systems</strong> but does not provoke a roll on the Effects Table.</td>\n<td>Decrement <strong>Systems</strong></td>\n</tr>\n<tr>\n<td>Repair System</td>\n<td>Sacrifice a number of <strong>Energy</strong> dice equal to the <strong>Systems</strong> damage taken to increment the <strong>Systems</strong> back up, i.e., repair the system damage. You cannot exceed the maximum <strong>Systems</strong> rating for the ship with this action.</td>\n<td>Sacrifice [<strong>Systems</strong> damage]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "af851af0d296c5c5",
+      "_key": "!journal.pages!7564417100f7b531.af851af0d296c5c5",
+      "name": "Sensors / Weapons Officer",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Analyse</td>\n<td>Analyse an opponent to get more information. Expend at will. Each success can provide you with one stat of your choice on the enemy Stat Sheet.</td>\n<td>Expend at will</td>\n</tr>\n<tr>\n<td>Target System</td>\n<td>Target a system on the enemy’s ship. Expend a number of <strong>Energy</strong> dice up to your <em>current</em> [<strong>Systems</strong>]. Each success is a dice that can be donated to the Pilot to <em>Attack</em>, although this action trades damage for effect.</td>\n<td>Expend up to [current <strong>Systems</strong>], Commit successes</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "cb3afb24f55523ea",
+      "_key": "!journal.pages!7564417100f7b531.cb3afb24f55523ea",
+      "name": "Pilot / Helmsman",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Maneuver</td>\n<td>Maneuver the ship along one vector: Move in, Move out, Shift Sector. Each movement step sacrifices 1 <strong>Energy</strong> dice. You can sacrifice up to [<strong>Maneuverability</strong>] dice.<br>You can move twice per round as one action. You can split this action: perform a maneuver, take another action, perform a second maneuver.</td>\n<td>Sacrifice up to [<strong>Maneuverability</strong>]</td>\n</tr>\n<tr>\n<td>Attack</td>\n<td>Select a weapon type (<strong>Volley</strong> or <strong>Prime</strong>). Sacrifice a number of dice to fire. An attack triggers an <strong>Evasion</strong> roll from the target. Each of their success cancels one weapon damage, i.e., one of your sacrificed dice—see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7564417100f7b531.JournalEntryPage.9d6924ba07424b8e]{Defense}</em>.</td>\n<td>Sacrifice up to [<strong>Volley</strong>]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "1e9fd83780c47cf6",
+      "_key": "!journal.pages!7564417100f7b531.1e9fd83780c47cf6",
+      "name": "Mechanic / Carpenter",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Repair Structural Damage</td>\n<td>Repair damage to the <strong>Structural Integrity</strong>. Expend <strong>Energy</strong> dice: 1 success equals 1 point of damage repaired.</td>\n<td>Expend at will</td>\n</tr>\n<tr>\n<td>Repair Critical Damage</td>\n<td>Repair damage from the Effects Table. Expend a number of <strong>Energy</strong> dice up to your <em>current</em> <strong>Systems</strong> value. At least one success repairs the damage—or at least patches it so that it is no longer an immediate threat to the ship and its crew. A failed roll has no effect.</td>\n<td>Expend [current <strong>Systems</strong>]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "365362a87228bd3d",
+      "_key": "!journal.pages!7564417100f7b531.365362a87228bd3d",
+      "name": "Ship Stats",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Ship Class</th>\n<th>Battleship</th>\n<th>Cruiser</th>\n<th>Frigate</th>\n<th>Corvette</th>\n<th>Destroyer</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Structural Integrity</td>\n<td>50</td>\n<td>40</td>\n<td>30</td>\n<td>20</td>\n<td>10</td>\n</tr>\n<tr>\n<td>Evasion</td>\n<td>2</td>\n<td>3</td>\n<td>4</td>\n<td>5</td>\n<td>8</td>\n</tr>\n<tr>\n<td>Armour</td>\n<td>20</td>\n<td>12</td>\n<td>7</td>\n<td>5</td>\n<td>2</td>\n</tr>\n<tr>\n<td>Volley</td>\n<td>12</td>\n<td>10</td>\n<td>8</td>\n<td>6</td>\n<td>4</td>\n</tr>\n<tr>\n<td>Prime</td>\n<td>12</td>\n<td>8</td>\n<td>6</td>\n<td>5</td>\n<td>3</td>\n</tr>\n<tr>\n<td>Energy</td>\n<td>90</td>\n<td>75</td>\n<td>45</td>\n<td>30</td>\n<td>18</td>\n</tr>\n<tr>\n<td>Systems</td>\n<td>30</td>\n<td>25</td>\n<td>15</td>\n<td>10</td>\n<td>6</td>\n</tr>\n<tr>\n<td>Maneuverability</td>\n<td>2</td>\n<td>3</td>\n<td>4</td>\n<td>5</td>\n<td>6</td>\n</tr>\n<tr>\n<td>Initiative Dice</td>\n<td>2d12</td>\n<td>2d10</td>\n<td>2d8</td>\n<td>2d6</td>\n<td>2d4</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 1500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

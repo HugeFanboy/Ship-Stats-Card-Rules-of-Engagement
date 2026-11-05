@@ -1,0 +1,58 @@
+{
+  "_id": "nAyVgIlRcrvNdCmr",
+  "_key": "!actors!nAyVgIlRcrvNdCmr",
+  "name": "Destroyer",
+  "type": "ship-stats-card.ship",
+  "img": "icons/svg/anchor.svg",
+  "system": {
+    "shipClass": "destroyer",
+    "structure": {
+      "value": 10,
+      "max": 10
+    },
+    "systems": {
+      "value": 6,
+      "max": 6
+    },
+    "armour": {
+      "value": 2,
+      "max": 2
+    },
+    "prime": {
+      "value": 3,
+      "max": 3
+    },
+    "evasion": 8,
+    "volley": 4,
+    "maneuverability": 6,
+    "energy": {
+      "committed": 0
+    },
+    "effects": [],
+    "notes": "",
+    "isNPC": false
+  },
+  "prototypeToken": {
+    "name": "Destroyer",
+    "actorLink": true,
+    "displayName": 50,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "structure"
+    },
+    "bar2": {
+      "attribute": "systems"
+    },
+    "texture": {
+      "src": "icons/svg/anchor.svg"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

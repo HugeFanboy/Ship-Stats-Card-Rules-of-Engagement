@@ -1,0 +1,98 @@
+{
+  "_id": "7f367b83e50b3e23",
+  "_key": "!journal!7f367b83e50b3e23",
+  "name": "Defense",
+  "pages": [
+    {
+      "_id": "62679496ff2a2b85",
+      "_key": "!journal.pages!7f367b83e50b3e23.62679496ff2a2b85",
+      "name": "Defense",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>There are two ways to defend against attacks: evasion (or dodging) and armour (or shielding).</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "fc4533f1f11416f9",
+      "_key": "!journal.pages!7f367b83e50b3e23.fc4533f1f11416f9",
+      "name": "Evasion",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>To evade, roll up to your ship’s <strong>Evasion</strong> dice. <strong>Evasion</strong> dice are independent from the <strong>Energy</strong> pool. Each success cancels one incoming hit—one <strong>Evasion</strong> success cancels one enemy <em>Attack</em> dice. The <strong>Evasion</strong> number typically corelates to the <strong>Maneuverability</strong> stat, often both being equal before modifications.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "462d0e7eab0fa74a",
+      "_key": "!journal.pages!7f367b83e50b3e23.462d0e7eab0fa74a",
+      "name": "Armour",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>You may add your full <strong>Armour</strong> value to the Evasion roll. If <strong>Armour</strong> is depleted, you can only rely on <strong>Evasion</strong>.</p>\n<p><strong>Armour</strong> automatically cancels a number of attacks equal to the its value, decrementing that value after the attack is resolved.</p>\n<p><strong>Armour</strong> can be repaired or replenished in dry dock.</p>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The (hero) pirate ship—pardon me—the <em>privateer</em> frigate The <em>Jolly Drunk</em> is being attacked by a navy vessel. The enemy fires their main guns (8 Volley); the <em>Jolly Drunk</em> needs to defend against 8 dice.</p>\n<p>The players choose to use their Armour (4) and make a hard maneuver (4 Evasion). The <em>Jolly Drunk</em> thus rolls 4d12 and they get 2 successes. The ship only takes 2 points of damage (damage received = 8 attack − 4 Armour − 2 Evasion successes = 2 damage).</p>\n<p>The players then decrement their Armour to 3 (4 Armour − 1 = 3 Armour).</p>\n</blockquote>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 4
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "90dbfbdc8f3bdb23",
+  "_key": "!journal!90dbfbdc8f3bdb23",
+  "name": "Basic Rules",
+  "pages": [
+    {
+      "_id": "302db7c803fe48e1",
+      "_key": "!journal.pages!90dbfbdc8f3bdb23.302db7c803fe48e1",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The system uses multiple d12s. The default target number (TN) is 9; a success on the d12 means rolling 9 or higher; some effects or actions can raise or lower the TN.</p>\n<p>This system works best for two or three combatants in total. With more combatants, the (abstract) tactical map becomes more or less useless. It is therefore suggested, for large fleet battles, to use the optional rules <em>Fleets and Armadas</em>.</p>\n<p>This ruleset is meant to be a sort of mini-game to play out instead of a group check or Montage Test or the like; in most cases, for most groups, when wanting to portray ship-to-ship combat, <strong>it is better to have the players roll to overcome a series of obstacles, rather than to switch to this random mini-game.</strong></p>\n<p>If the GM wants extra complexity for the fun of it, by all means, use as much of this system as you dare.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8e801d641824a8e6",
+      "_key": "!journal.pages!90dbfbdc8f3bdb23.8e801d641824a8e6",
+      "name": "Basic Rules",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Each combatant (i.e., each ship) can take up to three actions per round, assigned to up to three different positions. Each position has access to a specific set of actions.</p>\n<p>You cannot use the same action more than once in a single round, except for the <em>Maneuver</em> action.</p>\n<p>At the start of a battle (beginning of the encounter) the GM announces the opponents (including the hero ship) and briefly establishes some details: ship class, name, any other noticeable factor. The GM then places tokens on the map for enemy ships. The GM can either choose each ship’s starting position or roll for it: roll 1d4 for range (1 = Short, 4 = Extreme) and 1d8 for sector (result = sector number).</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>The term <em>“hero ship”</em> is used to mean the vessel the players control, even if said players are dastardly scoundrels.</p>\n</div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 1
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

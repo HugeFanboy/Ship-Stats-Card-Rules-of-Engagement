@@ -1,0 +1,202 @@
+{
+  "_id": "3852e1007a5eea10",
+  "_key": "!journal!3852e1007a5eea10",
+  "name": "Mobility and Ranges",
+  "pages": [
+    {
+      "_id": "20810e9c61e062cf",
+      "_key": "!journal.pages!3852e1007a5eea10.20810e9c61e062cf",
+      "name": "Mobility and Ranges",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Refer to the graphs below. The ranges and movements are abstract. By design, the exact measurements are not relevant to the mechanics.</p>\n<div class=\"ssc-graphs\" style=\"display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin:.75rem 0\">\n<figure style=\"flex:1 1 240px;max-width:420px;margin:0;text-align:center\"><img class=\"is-dark\" style=\"width:100%;height:auto;border-radius:8px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);background:#000\" src=\"modules/ship-stats-card/assets/tactical-graph-dark.webp\" alt=\"Tactical graph, white on black\"><figcaption style=\"font-size:.8rem;opacity:.7\">Dark</figcaption></figure>\n<figure style=\"flex:1 1 240px;max-width:420px;margin:0;text-align:center\"><img class=\"is-light\" style=\"width:100%;height:auto;border-radius:8px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);background:#fff\" src=\"modules/ship-stats-card/assets/tactical-graph-light.webp\" alt=\"Tactical graph, black on white\"><figcaption style=\"font-size:.8rem;opacity:.7\">Light</figcaption></figure>\n</div>\n<p>In the graphs, The central arrow shows your ship and its heading; its size is exaggerated to represent Immediate range. Immediate range means walking or jumping distance. Depending on the context or setting, it might mean larger distances in the order of a few or even several dozen metres. The other ranges are progressively larger, of course.</p>\n<p>The diagrams are velocity‑relative: they show the position of opponents relative to one another while both are in motion. Because the map is relative, a 2D graph is sufficient to represent up to three combatants (including the hero ship) even for three‑dimensional movement.</p>\n<p>Because of these simplifications, the ship can “move” in any direction. Moving in (or closing distance) and moving out (or making distance) keep you in the same numbered sector but change the range by one step. For instance, if an opponent is at Medium range and you move in, the opponent (represented by a token of your choice on the tactical graph) will then appear at Short range. If you moved out instead, the opponent would appear at Long range within the same slice—called sector—of the circle graph.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9657c1cc0c5f6da7",
+      "_key": "!journal.pages!3852e1007a5eea10.9657c1cc0c5f6da7",
+      "name": "Movement in Battle",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>You may perform up to two maneuvers as part of a single action. You can use the same maneuver twice in one round. You may split the action across other actions (e.g., perform a maneuver, take another action, then perform a second maneuver).</p>\n<p>You can move in <strong><em>or</em></strong> move out <strong><em>or</em></strong> you can shift sector as one maneuver. In other words, you can change the distance to the enemy and you can rotate the ship in one direction as part of the same action. “Diagonal movement” therefore is achieved by using both maneuvers.</p>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The <em>Jolly Drunk</em> takes the <em>Maneuver</em> action. The crew decides to move in to reach their weapons’ effective range, attack, and then retreat by moving out. This sequence involves two actions: one maneuver to move in, one maneuver to move out (one action) and one action to attack.</p>\n</blockquote>\n<p>When tracking two opponents beside the hero ship, you need to consider multiple sectors. Adjacent cells within the same range circle are classified as Short range from one another, while two cells apart are at Medium range. Additionally, the distance between range circles is also treated as short range. This means that “diagonally” adjacent cells are two range steps apart, or Medium range.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "707b0e7bb80d29a1",
+      "_key": "!journal.pages!3852e1007a5eea10.707b0e7bb80d29a1",
+      "name": "Maneuverability",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The <strong>Maneuverability</strong> stat represents the distance the ship can travel during a complete movement <em>action</em>. In other words, all maneuvers combined must not exceed this number.</p>\n<p>You can move more than one range step or one sector in a single maneuver, as long as it stays within your <strong>Maneuverability</strong> limit.</p>\n<p>When controlling an NPC enemy ship, they can only move in or move out by at most half of their <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.3852e1007a5eea10.JournalEntryPage.707b0e7bb80d29a1]{Maneuverability}</em> (rounded down) range steps and they cannot shift sector on their own—since shifting sector represents turning the hero ship, not moving in that direction.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "86d8380b552fe125",
+      "_key": "!journal.pages!3852e1007a5eea10.86d8380b552fe125",
+      "name": "Initiative",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>At the start of each round, each combatant rolls their initiative dice. Refer to the classification table below. This roll is not an action. The lower roll acts first; tied rolls are re-rolled between the tied parties until the tie is broken.</p>\n<table>\n<thead>\n<tr>\n<th><em>Ship Class</em></th>\n<th><em>Initiative Dice</em></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Battleship</td>\n<td>2d12</td>\n</tr>\n<tr>\n<td>Cruiser</td>\n<td>2d10</td>\n</tr>\n<tr>\n<td>Frigate</td>\n<td>2d8</td>\n</tr>\n<tr>\n<td>Corvette</td>\n<td>2d6</td>\n</tr>\n<tr>\n<td>Destroyer</td>\n<td>2d4</td>\n</tr>\n<tr>\n<td>Most hero ships will be classified as Destroyers or Corvettes, maybe a Frigate if you want a larger NPC crew aboard. It’s uncommon for PCs to command a Cruiser, Battleship (or equivalents) for long stretches—maybe for a single special battle. That said, the rules don’t <em>forbid</em> the heroes from piloting a Battleship with a three‑person crew. Go wild.</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<p>Combatants may take up to three actions in any order during their turn. If a combatant cannot take any action, they simply lose their turn and play passes to the next combatant in initiative.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "0c27ad20a332e2dc",
+      "_key": "!journal.pages!3852e1007a5eea10.0c27ad20a332e2dc",
+      "name": "Range and Weapon Facing",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Using directional weapons, your ship will usually have axial symmetry, which is the basis for this system. The <strong>Volley</strong> section of the ship’s stat card indicates the number of weapons on one side of the ship.</p>\n<p>Default weapons (that is, unmodified weapons) can target an arc spanning three sectors: the starboard side weapons can fire at targets in sectors 2, 3, or 4, while the port side weapons can engage targets in sectors 6, 7, or 8. This means you cannot fire towards the stern or bow—also known as aft and fore—in sectors 1 and 5, respectively.</p>\n<p>Default weapons have an effective range of Medium. This means there are no penalties for firing at that distance or closer. However, if you fire from a further distance, the target number (TN) for the enemy’s Evasion roll decreases by 2 for each additional range step. For example, if you fire at a ship positioned at Long range while your weapons have a Medium effective range, the TN for their Evasion roll will be 7.</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>You’re encouraged to use the graph and movement rules for tactical positioning to enhance your combat experience. This suggests your weapons occupy a physical space on your ship and face specific directions. However, if you prefer a simpler experience, you <em>can</em> mostly disregard the graph and focus solely on ranges, using just one sector.</p>\n</div>\n<p>In the event you have enemies on both sides of the ship, remember you can use the <em>Attack</em> action twice, but only once per ship side. You can fire your starboard weapons (first action) and then fire your port weapons (second action)—or vice versa, of course.</p>\n<p><strong>Prime weapons</strong>, unless stated otherwise, are oriented towards the stern and bow (sectors 1 and 5), but you can only fire one direction at a time, just like standard weapons. This is a simplification designed to keep the stats and calculations straightforward.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "c54af9beddd42553",
+      "_key": "!journal.pages!3852e1007a5eea10.c54af9beddd42553",
+      "name": "Ramming",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Yes, ramming. Although it’s not a recommended tactic or indeed a useful one in most cases, it can be fun and dramatic to “CHARGE!” the enemy or to have a player call out: “Prepare for ramming speed!”</p>\n<p>Therefore, you can attempt to ram and opponent if they are directly in front of your ship (in sector 1). In order to successfully ram, announce your intention and Commit dice for the ramming, up to your <strong>Maneuverability</strong>; the ramming will be considered a variant of the <em>Attack</em> action upon contact.</p>\n<p>When attacking in this way (i.e., at the moment of contact), the opponent will evade as usual, removing a number of ramming dice equal to their Evasion roll successes. Each remaining dice deals 1 damage to the enemy and 1 to your own ship. After resolving that damage, roll the remaining committed dice (Expend them), with the TN increased by 1 for each range step above Short range. Specifically, Short range ramming has a TN of 9 (standard); Medium range has a TN of 10; Long range has a TN of 11; Extreme range has a TN of 12. Each success deals an additional 5 points of damage to the enemy. If your ship’s <strong>Structural Integrity</strong> reaches 0 from the initial impact, it is destroyed resulting in no further damage to the enemy.</p>\n<hr>\n<h4 id=\"ramming-action\">Ramming Action</h4>\n<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Attack<br>(Ramming)</td>\n<td>The target must be in sector 1.<br>Commit up to your <strong>Maneuverability</strong>.<br>At the moment of contact, the target first evades, removing a number of ramming dice equal to their Evasion successes; each remaining dice deals 1 damage to both ships.<br>Then expend the remaining committed dice (Short TN 9, Medium TN 10, Long TN 11, Extreme TN 12), with each success adding 5 damage to the enemy.<br>(If your ship’s Structural Integrity drops to 0 from the initial impact, it is destroyed and no further damage is applied to the enemy.)</td>\n<td>Commit up to [<strong>Maneuverability</strong>],<br>over multiple rounds</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<blockquote class=\"ssc-example\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid color-mix(in srgb,currentColor 40%,transparent);background:color-mix(in srgb,currentColor 6%,transparent);font-style:italic\">\n<p>The <em>Jolly Drunk</em> is badly damaged. In desperation, its crew decides to ram the enemy navy ship staring them down straight ahead, to bow. They loudly declare, “All speed ahead!”\nThey are at Long range now; they start the round by committing all of their Maneuverability dice to the ramming, making a pool of 4 dice. The enemy ship notices that and, in the next round, they move out to Extreme range. The <em>Jolly Drunk</em>’s crew decide to move closer before attacking; they maneuver into Long range again. The third round, the crew moves in again; the enemy does not move. The fourth round, the navy ship moves first and closes the gap to fire their Prime weapons; the <em>Jolly Drunk</em> is now at Short range and the crew decides to commit one more round of dice; the ramming pool is now 8 dice. The fifth round, the <em>Jolly Drunk</em> manages to act first: they ram. The navy ship evades against 8 dice, managing 3 successes; 5 ramming dice remain. The crew of the <em>Jolly Drunk</em> roll their ramming dice and get 4 successes. They deal a total of 25 damage to the enemy (5 ramming dice + 4 successes × 5), and they take 5 damage to their own ship, rendering them barely capable of floating, let alone seaworthy.</p>\n</blockquote>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "2ec2f4282e111f98",
+      "_key": "!journal.pages!3852e1007a5eea10.2ec2f4282e111f98",
+      "name": "Boarding",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>If you want to board the enemy ship, it must be within Short range and a special <em>Boarding</em>\naction will be used (variant of the <em>Attack</em> action). Conversely, you can be boarded under the same conditions.</p>\n<hr>\n<h4 id=\"boarding-action\">Boarding Action</h4>\n<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Attack<br>(Boarding)</td>\n<td>The target must be within Short range. Sacrifice up to <strong>Volley</strong> to initiate the attack, which triggers an Evasion roll from the target. Each success on their roll cancels <strong>two</strong> of your sacrificed dice.<br>While the attack itself deals no damage, if you have any dice remaining in your attack pool after the enemy’s defense, you can board the enemy ship.</td>\n<td>Sacrifice up to [<strong>Volley</strong>]</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<p>When boarding, move some or all of your characters to the boarded ship. You then have two options:</p>\n<ol>\n<li>You can transition to character combat (according to your setting and normal ruleset).</li>\n<li>The boarded ship capitulates, ending any ongoing effect or damage over time and the crew of the boarded ship is effectively disarmed.</li>\n</ol>\n<p>Either way, the ship-to-ship combat that this ruleset represents should end.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 5
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

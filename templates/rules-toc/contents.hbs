@@ -1,0 +1,17 @@
+<section class="ssc-toc-contents">
+  <header><h1>{{localize "SHIPSTATS.Rules.Contents"}}</h1></header>
+  <section class="ssc-chapters">
+    {{#each chapters}}
+    <div class="ssc-chapter" data-document-id="{{id}}" data-entry-id="{{id}}">
+      <h3><a class="journal-entry-link" data-action="activateEntry">{{name}}</a></h3>
+      {{#if pages.length}}
+      <ul>
+        {{#each pages}}
+        <li><a class="journal-entry-page-link" data-action="activateEntry" data-page-id="{{id}}" data-entry-id="{{entryId}}">{{name}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/each}}
+  </section>
+</section>

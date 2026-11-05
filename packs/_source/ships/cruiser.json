@@ -1,0 +1,58 @@
+{
+  "_id": "dYeQuz0bd4Ff96gA",
+  "_key": "!actors!dYeQuz0bd4Ff96gA",
+  "name": "Cruiser",
+  "type": "ship-stats-card.ship",
+  "img": "icons/svg/anchor.svg",
+  "system": {
+    "shipClass": "cruiser",
+    "structure": {
+      "value": 40,
+      "max": 40
+    },
+    "systems": {
+      "value": 25,
+      "max": 25
+    },
+    "armour": {
+      "value": 12,
+      "max": 12
+    },
+    "prime": {
+      "value": 8,
+      "max": 8
+    },
+    "evasion": 3,
+    "volley": 10,
+    "maneuverability": 3,
+    "energy": {
+      "committed": 0
+    },
+    "effects": [],
+    "notes": "",
+    "isNPC": false
+  },
+  "prototypeToken": {
+    "name": "Cruiser",
+    "actorLink": true,
+    "displayName": 50,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "structure"
+    },
+    "bar2": {
+      "attribute": "systems"
+    },
+    "texture": {
+      "src": "icons/svg/anchor.svg"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

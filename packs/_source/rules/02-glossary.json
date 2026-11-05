@@ -1,0 +1,46 @@
+{
+  "_id": "0a4d420769c8c37e",
+  "_key": "!journal!0a4d420769c8c37e",
+  "name": "Glossary",
+  "pages": [
+    {
+      "_id": "72ebbe701eb449a0",
+      "_key": "!journal.pages!0a4d420769c8c37e.72ebbe701eb449a0",
+      "name": "Glossary",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th><em>Term</em></th>\n<th><em>Definition</em></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>TN</td>\n<td>The target number. A success on the d12 means rolling this number or higher. By default, TN = 9.</td>\n</tr>\n<tr>\n<td>Expend</td>\n<td>Roll dice and use the successes this round.</td>\n</tr>\n<tr>\n<td>Commit</td>\n<td>Set dice aside. They cannot be used again until they complete their commitment.</td>\n</tr>\n<tr>\n<td>Sacrifice</td>\n<td>Remove dice for the rest of the round; they aren’t rolled and count as automatic successes.</td>\n</tr>\n<tr>\n<td>Decrement</td>\n<td>Decrease by 1.</td>\n</tr>\n<tr>\n<td>Increment</td>\n<td>Increase by 1.</td>\n</tr>\n<tr>\n<td>Evasion</td>\n<td>Avoid enemy attacks. It is automatic and requires no crew action—just an Evasion roll. Each success cancels one of the enemy sacrificed dice.</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 2
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

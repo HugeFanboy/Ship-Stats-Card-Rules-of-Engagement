@@ -1,0 +1,58 @@
+{
+  "_id": "itMkRdkYyzKDxbT7",
+  "_key": "!actors!itMkRdkYyzKDxbT7",
+  "name": "Frigate",
+  "type": "ship-stats-card.ship",
+  "img": "icons/svg/anchor.svg",
+  "system": {
+    "shipClass": "frigate",
+    "structure": {
+      "value": 30,
+      "max": 30
+    },
+    "systems": {
+      "value": 15,
+      "max": 15
+    },
+    "armour": {
+      "value": 7,
+      "max": 7
+    },
+    "prime": {
+      "value": 6,
+      "max": 6
+    },
+    "evasion": 4,
+    "volley": 8,
+    "maneuverability": 4,
+    "energy": {
+      "committed": 0
+    },
+    "effects": [],
+    "notes": "",
+    "isNPC": false
+  },
+  "prototypeToken": {
+    "name": "Frigate",
+    "actorLink": true,
+    "displayName": 50,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "structure"
+    },
+    "bar2": {
+      "attribute": "systems"
+    },
+    "texture": {
+      "src": "icons/svg/anchor.svg"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

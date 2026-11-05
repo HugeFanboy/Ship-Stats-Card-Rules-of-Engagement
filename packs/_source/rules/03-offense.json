@@ -1,0 +1,72 @@
+{
+  "_id": "33078a357a30d80a",
+  "_key": "!journal!33078a357a30d80a",
+  "name": "Offense",
+  "pages": [
+    {
+      "_id": "eb8571090e63f53e",
+      "_key": "!journal.pages!33078a357a30d80a.eb8571090e63f53e",
+      "name": "Volley",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This represents the number of broadside weapons, the basic armament, your ship has available. The type of weapon is more or less irrelevant. Mundane ballistae or cannons or—depending on your setting—magic guns or photonic blasters are all, mechanically, the same: <strong>Volley</strong>.</p>\n<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p>It’s worth mentioning that <strong>Volley</strong> technically represents the weapons on only one side of the ship; see @UUID[Compendium.ship-stats-card.rules.JournalEntry.3852e1007a5eea10.JournalEntryPage.0c27ad20a332e2dc]{Range and Weapon Facing} for more details.</p>\n</div>\n<p>When attacking with your <strong>Volley</strong>, you expend <strong>Energy</strong> dice up to the number of weapons available: your <strong>Volley</strong> stat.</p>\n<p>Ammunition (ammo) or charge for your <strong>Volley</strong> weapons is always assumed to be plentiful. By default, each weapon deals 1 point of damage. Modifications to the <strong>Volley</strong> can increase this damage or add a special effect—for instance, incendiary rounds. See <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.61e1e70906654345]{Modifications}</em> for further details on options for ammo or weapons.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "3fba6c87bdb0e2a6",
+      "_key": "!journal.pages!33078a357a30d80a.3fba6c87bdb0e2a6",
+      "name": "Prime",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>Prime</strong> weaponry is something else. You can only have one <strong>Prime</strong> weapon—unless you have the <em>Weapons platform</em> modification (see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.61e1e70906654345]{Modifications}</em>). The <strong>Prime</strong> stat represents the number of ammo or charge for the weapon you have. In other words, the <strong>Prime</strong> stat is the maximum number of times this weapon can be used in a battle.</p>\n<p>In general, the <strong>Prime</strong> weapon deals 5 damage if at least one of the attack dice remains after the enemy’s defense.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 3
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

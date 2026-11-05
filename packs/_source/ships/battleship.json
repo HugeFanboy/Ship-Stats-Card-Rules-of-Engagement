@@ -1,0 +1,58 @@
+{
+  "_id": "DOPiaxqYQLIPjBk4",
+  "_key": "!actors!DOPiaxqYQLIPjBk4",
+  "name": "Battleship",
+  "type": "ship-stats-card.ship",
+  "img": "icons/svg/anchor.svg",
+  "system": {
+    "shipClass": "battleship",
+    "structure": {
+      "value": 50,
+      "max": 50
+    },
+    "systems": {
+      "value": 30,
+      "max": 30
+    },
+    "armour": {
+      "value": 20,
+      "max": 20
+    },
+    "prime": {
+      "value": 12,
+      "max": 12
+    },
+    "evasion": 2,
+    "volley": 12,
+    "maneuverability": 2,
+    "energy": {
+      "committed": 0
+    },
+    "effects": [],
+    "notes": "",
+    "isNPC": false
+  },
+  "prototypeToken": {
+    "name": "Battleship",
+    "actorLink": true,
+    "displayName": 50,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "structure"
+    },
+    "bar2": {
+      "attribute": "systems"
+    },
+    "texture": {
+      "src": "icons/svg/anchor.svg"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "a873aa84e14839c1",
+  "_key": "!journal!a873aa84e14839c1",
+  "name": "Damage",
+  "pages": [
+    {
+      "_id": "437671dab3274711",
+      "_key": "!journal.pages!a873aa84e14839c1.437671dab3274711",
+      "name": "Damage",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>When you receive damage, you choose to either apply points of damage to the <strong>Structural Integrity</strong> of the ship or to forgo damage to instead decrement the <strong>Systems</strong> value. If a section or a system has been targeted, however, you <em>must</em> apply the effect to the appropriate section.</p>\n<p>If the damage taken reduces the <strong>Structural Integrity</strong> to 0, the ship is destroyed. Furthermore, whenever the ship takes 10 points of damage or more in a single salvo, roll on the Effects Table (see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.a873aa84e14839c1.JournalEntryPage.a6d5817ea958c459]{Effects Table}</em> below). If a system has been targeted, you must roll on the Effects Table and decrement the <strong>Systems</strong>.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "a6d5817ea958c459",
+      "_key": "!journal.pages!a873aa84e14839c1.a6d5817ea958c459",
+      "name": "Effects Table",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div class=\"ssc-note\" style=\"margin:.75rem 0;padding:.4rem .85rem;border-left:4px solid #3b82f6;border-radius:4px;background:color-mix(in srgb,#3b82f6 14%,transparent)\">\n<p><strong>Note</strong></p>\n<p><strong>Foundry:</strong> roll this table from the Ship Combat Tables compendium (@UUID[Compendium.ship-stats-card.tables.RollTable.0855917242343b9c]{Effects Table}), or use the <em>Roll Effects Table</em> button on a ship's sheet, which also ticks the result under Applied Effects.</p>\n</div>\n<table>\n<thead>\n<tr>\n<th>#</th>\n<th>Effect</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>01‑08</td>\n<td>Debris</td>\n<td>Repairs are made difficult by debris. Expend twice the number of <strong>Energy</strong> dice to repair structural damage.</td>\n</tr>\n<tr>\n<td>09‑16</td>\n<td>Sluggish response</td>\n<td>The crew is disorientated. + 2 to <strong>Initiative</strong>.</td>\n</tr>\n<tr>\n<td>17‑24</td>\n<td>Skewed balance</td>\n<td>The ship is unbalanced, slowly tilting and drifting. − 2 <strong>Evasion</strong> while the effect persists.</td>\n</tr>\n<tr>\n<td>25‑32</td>\n<td>Impaired defense</td>\n<td>You cannot use <strong>Armour</strong> when defending.</td>\n</tr>\n<tr>\n<td>33‑40</td>\n<td>Weapons instability</td>\n<td>If not repaired, the next attack decrements your <strong>Volley</strong>. Stacks until repaired or minimum of 1 <strong>Volley</strong>.</td>\n</tr>\n<tr>\n<td>41‑48</td>\n<td>Volley weapons malfunction</td>\n<td>The weapons are damaged and require more energy than they should. Sacrifice 2 additional <strong>Energy</strong> dice when firing <strong>Volley</strong> (that do not count as attack dice).</td>\n</tr>\n<tr>\n<td>49‑56</td>\n<td>Prime weapons misfire</td>\n<td><strong>Prime</strong> weapons may fail to launch. For each dice sacrificed to the attack, roll it (TN 7). On a failed launch (1–6), the ship takes 5 damage and the weapon deals no effect to the target.</td>\n</tr>\n<tr>\n<td>57‑64</td>\n<td>Blindspot</td>\n<td>Your aim is off. <em>Enemy Evasion</em> TN − 2.</td>\n</tr>\n<tr>\n<td>65‑71</td>\n<td>Explosion/Fire</td>\n<td>At the start of your next turn, inflict 1 damage initially, incrementing the damage each subsequent round until the issue is resolved.; in essence, apply 1 damage in the first round, 2 damage in the second round, 3 damage in the third round, and so on.</td>\n</tr>\n<tr>\n<td>72‑78</td>\n<td>Lethargic maneuvering</td>\n<td>The <em>Maneuver</em> action costs 2 actions.</td>\n</tr>\n<tr>\n<td>79‑85</td>\n<td>Rudder jammed</td>\n<td>The maneuvering system (the rudder) is jammed (or stuck). You cannot use the <em>Maneuver</em> action.</td>\n</tr>\n<tr>\n<td>86‑92</td>\n<td>Leaking energy</td>\n<td>Sacrifice 5 <strong>Energy</strong> dice per round until repaired.</td>\n</tr>\n<tr>\n<td>93‑99</td>\n<td>Haemorrhaging energy</td>\n<td>The sails—or reactors—are badly damaged; you can only get half the <strong>Energy</strong> you should (rounded down).</td>\n</tr>\n<tr>\n<td>00 (100)</td>\n<td>Critical damage</td>\n<td>The ship cannot move and is falling out of the sky, is taking on water, is dead in space, etc. <em>Terminal damage.</em></td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 8
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

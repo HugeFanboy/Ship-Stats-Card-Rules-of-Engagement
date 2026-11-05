@@ -1,0 +1,284 @@
+{
+  "_id": "0855917242343b9c",
+  "_key": "!tables!0855917242343b9c",
+  "name": "Effects Table",
+  "img": "icons/svg/explosion.svg",
+  "description": "<p>Roll on this table whenever a ship takes 10 or more points of damage in a single salvo, or when a system has been targeted.</p>",
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "39f9ee51b27d5423",
+      "_key": "!tables.results!0855917242343b9c.39f9ee51b27d5423",
+      "type": "text",
+      "name": "Debris",
+      "description": "Repairs are made difficult by debris. Expend twice the number of <strong>Energy</strong> dice to repair structural damage.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "debris"
+        }
+      }
+    },
+    {
+      "_id": "dc9b9f6b9e037ed7",
+      "_key": "!tables.results!0855917242343b9c.dc9b9f6b9e037ed7",
+      "type": "text",
+      "name": "Sluggish response",
+      "description": "The crew is disorientated. +2 to <strong>Initiative</strong>.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        9,
+        16
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "sluggishResponse"
+        }
+      }
+    },
+    {
+      "_id": "6122234480fff805",
+      "_key": "!tables.results!0855917242343b9c.6122234480fff805",
+      "type": "text",
+      "name": "Skewed balance",
+      "description": "The ship is unbalanced, slowly tilting and drifting. −2 <strong>Evasion</strong> while the effect persists.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        17,
+        24
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "skewedBalance"
+        }
+      }
+    },
+    {
+      "_id": "ff0728f4473d144d",
+      "_key": "!tables.results!0855917242343b9c.ff0728f4473d144d",
+      "type": "text",
+      "name": "Impaired defense",
+      "description": "You cannot use <strong>Armour</strong> when defending.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        25,
+        32
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "impairedDefense"
+        }
+      }
+    },
+    {
+      "_id": "72fb974feddcd359",
+      "_key": "!tables.results!0855917242343b9c.72fb974feddcd359",
+      "type": "text",
+      "name": "Weapons instability",
+      "description": "If not repaired, the next attack decrements your <strong>Volley</strong>. Stacks until repaired or minimum of 1 <strong>Volley</strong>.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        33,
+        40
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "weaponsInstability"
+        }
+      }
+    },
+    {
+      "_id": "83d7dc13078ce514",
+      "_key": "!tables.results!0855917242343b9c.83d7dc13078ce514",
+      "type": "text",
+      "name": "Volley weapons malfunction",
+      "description": "The weapons are damaged and require more energy than they should. Sacrifice 2 additional <strong>Energy</strong> dice when firing <strong>Volley</strong> (that do not count as attack dice).",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        41,
+        48
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "volleyMalfunction"
+        }
+      }
+    },
+    {
+      "_id": "5b9bfa3873fd1f3d",
+      "_key": "!tables.results!0855917242343b9c.5b9bfa3873fd1f3d",
+      "type": "text",
+      "name": "Prime weapons misfire",
+      "description": "<strong>Prime</strong> weapons may fail to launch. For each dice sacrificed to the attack, roll it (TN 7). On a failed launch (1–6), the ship takes 5 damage and the weapon deals no effect to the target.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        49,
+        56
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "primeMisfire"
+        }
+      }
+    },
+    {
+      "_id": "0d591bf332653ac5",
+      "_key": "!tables.results!0855917242343b9c.0d591bf332653ac5",
+      "type": "text",
+      "name": "Blindspot",
+      "description": "Your aim is off. <em>Enemy Evasion</em> TN −2.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 8,
+      "range": [
+        57,
+        64
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "blindspot"
+        }
+      }
+    },
+    {
+      "_id": "38187cbe898cd69e",
+      "_key": "!tables.results!0855917242343b9c.38187cbe898cd69e",
+      "type": "text",
+      "name": "Explosion/Fire",
+      "description": "At the start of your next turn, inflict 1 damage initially, incrementing the damage each subsequent round until the issue is resolved; in essence, apply 1 damage in the first round, 2 damage in the second round, 3 damage in the third round, and so on.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 7,
+      "range": [
+        65,
+        71
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "explosionFire"
+        }
+      }
+    },
+    {
+      "_id": "a91e2a10cf012133",
+      "_key": "!tables.results!0855917242343b9c.a91e2a10cf012133",
+      "type": "text",
+      "name": "Lethargic maneuvering",
+      "description": "The <em>Maneuver</em> action costs 2 actions.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 7,
+      "range": [
+        72,
+        78
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "lethargicManeuvering"
+        }
+      }
+    },
+    {
+      "_id": "a142201c345fe858",
+      "_key": "!tables.results!0855917242343b9c.a142201c345fe858",
+      "type": "text",
+      "name": "Rudder jammed",
+      "description": "The maneuvering system (the rudder) is jammed (or stuck). You cannot use the <em>Maneuver</em> action.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 7,
+      "range": [
+        79,
+        85
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "rudderJammed"
+        }
+      }
+    },
+    {
+      "_id": "665e297654fb9f00",
+      "_key": "!tables.results!0855917242343b9c.665e297654fb9f00",
+      "type": "text",
+      "name": "Leaking energy",
+      "description": "Sacrifice 5 <strong>Energy</strong> dice per round until repaired.",
+      "img": "icons/svg/explosion.svg",
+      "weight": 7,
+      "range": [
+        86,
+        92
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "leakingEnergy"
+        }
+      }
+    },
+    {
+      "_id": "a399b9a4a29c0cb9",
+      "_key": "!tables.results!0855917242343b9c.a399b9a4a29c0cb9",
+      "type": "text",
+      "name": "Haemorrhaging energy",
+      "description": "The sails—or reactors—are badly damaged; you can only get half the <strong>Energy</strong> you should (rounded down).",
+      "img": "icons/svg/explosion.svg",
+      "weight": 7,
+      "range": [
+        93,
+        99
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "haemorrhagingEnergy"
+        }
+      }
+    },
+    {
+      "_id": "f0a33b469d5f1d5b",
+      "_key": "!tables.results!0855917242343b9c.f0a33b469d5f1d5b",
+      "type": "text",
+      "name": "Critical damage",
+      "description": "The ship cannot move and is falling out of the sky, is taking on water, is dead in space, etc. <em>Terminal damage.</em>",
+      "img": "icons/svg/explosion.svg",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "flags": {
+        "ship-stats-card": {
+          "effectKey": "criticalDamage"
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "flags": {},
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

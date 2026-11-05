@@ -1,0 +1,72 @@
+{
+  "_id": "fa7433cb9ad29964",
+  "_key": "!journal!fa7433cb9ad29964",
+  "name": "Power",
+  "pages": [
+    {
+      "_id": "1112fd1239c9f4d6",
+      "_key": "!journal.pages!fa7433cb9ad29964.1112fd1239c9f4d6",
+      "name": "Energy",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>Energy</strong> is represented by a pool of d12s that refreshes each round. Any <strong>Energy</strong> unused by the end of the round is lost. The amount of <strong>Energy</strong> you have is based on the ship’s <strong>Systems</strong>. If the <strong>Systems</strong> value decreases during battle, your <strong>Energy</strong> will decrease as well; this takes effect on your next turn.</p>\n<p>Dice that have been committed won’t refresh and return to the pool until they’ve fulfilled that commitment. You may have more dice committed than your maximum <strong>Energy</strong>.</p>\n<p>The default amount of <strong>Energy</strong> your ship has available is equal to 3 times your <strong>Systems</strong>.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "42c983ad96fb7028",
+      "_key": "!journal.pages!fa7433cb9ad29964.42c983ad96fb7028",
+      "name": "Systems",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This number reflects the ship’s overall worthiness. If it reaches 0, the ship can no longer function. In this case, the ship isn’t destroyed, but it’s severely damaged and would need major repairs to be operational again.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 6
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

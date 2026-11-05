@@ -1,0 +1,105 @@
+/* Ship Stats Card: theme-agnostic (uses currentColor mixes so it works in light and dark Foundry themes). */
+.ship-stats-card .ssc-sheet { display: flex; flex-direction: column; gap: 0.75rem; padding: 0.5rem; }
+.ship-stats-card .ssc-sheet.is-edit { box-shadow: inset 0 0 0 2px var(--color-warm-2, #c90); border-radius: 8px; }
+
+/* Cards */
+.ship-stats-card .ssc-card {
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+}
+.ship-stats-card .ssc-card-title { margin: 0 0 0.25rem; font-size: 1.05rem; border: none; }
+
+/* Ship header */
+.ship-stats-card .ssc-ship-top { display: flex; align-items: center; gap: 0.75rem; }
+.ship-stats-card .ssc-portrait { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.ship-stats-card .ssc-portrait.is-editable { outline: 2px dashed var(--color-warm-2, #c90); cursor: pointer; }
+.ship-stats-card .ssc-title { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+.ship-stats-card .ssc-title input[type="text"] { width: 100%; font-size: 1.3rem; font-weight: bold; }
+.ship-stats-card .ssc-name { margin: 0; border: none; font-size: 1.7rem; }
+.ship-stats-card .ssc-badge { border: 1px solid color-mix(in srgb, currentColor 35%, transparent); border-radius: 999px; padding: 0.1rem 0.75rem; font-size: 0.85rem; }
+.ship-stats-card .ssc-mode-toggle { flex: 0 0 auto; width: auto; white-space: nowrap; }
+
+/* Structural Integrity */
+.ship-stats-card .ssc-hull { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.ship-stats-card .ssc-hull-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ship-stats-card .ssc-hull-label { display: flex; align-items: center; gap: 0.5rem; }
+.ship-stats-card .ssc-heart { color: oklch(0.6453 0.2603 2.47); }
+.ship-stats-card .ssc-hull-controls { display: flex; align-items: center; gap: 0.25rem; }
+.ship-stats-card .ssc-hull-value { min-width: 5rem; text-align: center; font-size: 1.2rem; font-weight: bold; }
+.ship-stats-card .ssc-bar { height: 0.75rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, currentColor 14%, transparent); }
+.ship-stats-card .ssc-bar > div { height: 100%; border-radius: 999px; background: linear-gradient(90deg, oklch(0.6453 0.2603 2.47 / 0.6), oklch(0.6453 0.2603 2.47)); transition: width 0.25s; }
+.ship-stats-card .ssc-hull-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.ship-stats-card .ssc-damage { color: #f87171; border-color: color-mix(in srgb, #f87171 55%, transparent); }
+.ship-stats-card .ssc-repair { color: #4ade80; border-color: color-mix(in srgb, #4ade80 55%, transparent); }
+
+/* Grouped stat cards */
+.ship-stats-card .ssc-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.ship-stats-card .ssc-stat-box {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, currentColor 7%, transparent);
+}
+.ship-stats-card .ssc-stat-head { display: flex; align-items: center; gap: 0.5rem; }
+.ship-stats-card .ssc-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 8px;
+  color: var(--ssc-color);
+  background: color-mix(in srgb, var(--ssc-color) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ssc-color) 50%, transparent);
+}
+.ship-stats-card .ssc-stat-label { opacity: 0.8; }
+.ship-stats-card .ssc-help { opacity: 0.55; font-size: 0.8rem; cursor: help; }
+.ship-stats-card .ssc-stat-body { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-height: 3rem; margin-top: 0.35rem; }
+.ship-stats-card .ssc-value { margin: 0; font-size: 1.9rem; line-height: 1.2; }
+.ship-stats-card .ssc-max { font-size: 0.95rem; opacity: 0.55; }
+.ship-stats-card .ssc-last-roll {
+  margin-left: 0.5rem; padding: 0.1rem 0.5rem; font-size: 1rem; border-radius: 4px; vertical-align: middle;
+  color: SpringGreen;
+  background: color-mix(in srgb, SpringGreen 15%, transparent);
+  border: 1px solid color-mix(in srgb, SpringGreen 50%, transparent);
+}
+.ship-stats-card .ssc-actions { display: flex; gap: 0.25rem; }
+.ship-stats-card .ssc-pool-edit { display: flex; align-items: center; gap: 0.25rem; }
+.ship-stats-card .ssc-committed { display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; opacity: 0.85; }
+
+/* Inputs and ghost buttons */
+.ship-stats-card .ssc-num { width: 3.6rem; text-align: center; }
+.ship-stats-card .ssc-num.is-wide { width: 5rem; }
+.ship-stats-card .ssc-icon-btn { width: 2rem; height: 2rem; padding: 0; line-height: 1; background: none; border: none; box-shadow: none; opacity: 0.75; }
+.ship-stats-card .ssc-icon-btn:hover { opacity: 1; background: color-mix(in srgb, currentColor 14%, transparent); }
+.ship-stats-card .ssc-icon-btn.is-large { width: 2.6rem; height: 2.6rem; font-size: 1.25rem; border-radius: 8px; }
+
+/* Modifications */
+.ship-stats-card .ssc-card textarea { width: 100%; resize: vertical; }
+.ship-stats-card .ssc-readonly { margin: 0; white-space: pre-wrap; }
+
+/* Applied effects */
+.ship-stats-card .ssc-effects-header { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.ship-stats-card .ssc-effects-header button { width: auto; white-space: nowrap; }
+.ship-stats-card .ssc-active-effects { margin: 0.4rem 0; padding-left: 1.1rem; font-size: 0.9rem; }
+.ship-stats-card .ssc-effects-list summary { cursor: pointer; font-weight: bold; margin: 0.25rem 0; }
+.ship-stats-card .ssc-effects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.15rem 0.75rem; }
+.ship-stats-card .ssc-effect { display: flex; align-items: center; gap: 0.35rem; }
+.ship-stats-card .ssc-effect input { margin: 0; flex: 0 0 auto; }
+.ship-stats-card .ssc-range { font-variant-numeric: tabular-nums; opacity: 0.65; font-size: 0.8rem; }
+
+@media (max-width: 520px) {
+  .ship-stats-card .ssc-groups { grid-template-columns: 1fr; }
+}
+
+/* Stat modifications + NPC switch */
+.ship-stats-card .ssc-mod { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed color-mix(in srgb, currentColor 20%, transparent); }
+.ship-stats-card .ssc-mod-toggle,
+.ship-stats-card .ssc-npc { display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer; }
+.ship-stats-card .ssc-mod input[type="checkbox"],
+.ship-stats-card .ssc-npc input[type="checkbox"] { margin: 0; }
+.ship-stats-card .ssc-half { margin-left: 0.5rem; font-size: 1.3rem; opacity: 0.55; }
+.ship-stats-card .ssc-mod-field { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 0.4rem; }
+.ship-stats-card .ssc-mod-field label { font-size: 0.8rem; font-weight: bold; opacity: 0.8; }
+.ship-stats-card .ssc-mod-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.ship-stats-card .ssc-mod-list li { padding: 0.4rem 0.6rem; border-radius: 6px; background: color-mix(in srgb, currentColor 7%, transparent); }
+.ship-stats-card .ssc-mod-list li::before { content: "•"; color: cyan; margin-right: 0.5rem; }
+.ship-stats-card .ssc-hint { opacity: 0.65; font-style: italic; }

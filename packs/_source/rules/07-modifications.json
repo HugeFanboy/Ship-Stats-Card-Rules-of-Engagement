@@ -1,0 +1,46 @@
+{
+  "_id": "61e1e70906654345",
+  "_key": "!journal!61e1e70906654345",
+  "name": "Modifications",
+  "pages": [
+    {
+      "_id": "961cfa0eb091f1a7",
+      "_key": "!journal.pages!61e1e70906654345.961cfa0eb091f1a7",
+      "name": "Modifications",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Modifications can be anything and everything. Nearly every rule can be tweaked, amended, or completely rewritten by modifications (or mods). All ships have 8 maximum modifications, but the size, shape, or weight of the mod is irrelevant (unless you want it to be). You can only have one mod per ship stat. You can only modify your <strong>Volley</strong> one way, you can only modify your <strong>Energy</strong> output in a certain way, and so on. For instance, if you have a mod for your <strong>Volley</strong> that increases damage, you cannot also have a mod that extends the range of the <strong>Volley</strong>.</p>\n<p>None of these modifications are proscriptive. Feel free to come up with new mods or to change the ones offered here. Always discuss with your group which mods they would like and how they want them—ergo, whether they want to buy it, build it, steal it, or anything else. It has no mechanical impact, but it can be an interesting goal to work towards.</p>\n<p>Here are examples modifications:</p>\n<table>\n<thead>\n<tr>\n<th><strong><em>Modification</em></strong></th>\n<th><strong>Description</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><em>Multiple magazines</em></td>\n<td>You can store two types of ammo for your <strong>Volley</strong>. Once per turn, you can swap which ammo you are using (no action required). (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Big bullets</em></td>\n<td>Your <strong>Volley</strong> deal +1 damage per hit. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Long range</em></td>\n<td>Your <strong>Volley</strong> have an effective range of Long. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Gimbals</em></td>\n<td>Your main <strong>Volley</strong> are mounted on gimbals, allowing them more freedom of motion; you can fire in any sector. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Penetrating bullets</em></td>\n<td>Perforating: +2 damage per hit. (<strong>Volley</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Weapons platform</em></td>\n<td>You can have one other <strong>Prime</strong> weapon type. It shares ammunition with the one you already have, increasing the <strong>Prime</strong> stat by 5. The effects of both weapons may be different. (<strong>Prime weapon</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Fast sails</em></td>\n<td>Increase your <strong>Maneuverability</strong> by 2. (<strong>Maneuverability</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Steady centerboard</em></td>\n<td>Increase your <strong>Evasion</strong> by 2. (<strong>Evasion</strong> mod)</td>\n</tr>\n<tr>\n<td><em>Heavy armour</em></td>\n<td>Increase your <strong>Armour</strong> by 4, decrease your <strong>Evasion</strong> by 4. (<strong>Armour</strong> mod)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 7
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

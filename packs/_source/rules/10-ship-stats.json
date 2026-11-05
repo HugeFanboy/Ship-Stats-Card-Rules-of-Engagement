@@ -1,0 +1,46 @@
+{
+  "_id": "55ce02e063cbaaf3",
+  "_key": "!journal!55ce02e063cbaaf3",
+  "name": "Ship Stats",
+  "pages": [
+    {
+      "_id": "f1c5ab80f11fd721",
+      "_key": "!journal.pages!55ce02e063cbaaf3.f1c5ab80f11fd721",
+      "name": "Ship Stats",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Example ships</p>\n<table>\n<thead>\n<tr>\n<th>Ship Class</th>\n<th>Battleship</th>\n<th>Cruiser</th>\n<th>Frigate</th>\n<th>Corvette</th>\n<th>Destroyer</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Structural Integrity</td>\n<td>50</td>\n<td>40</td>\n<td>30</td>\n<td>20</td>\n<td>10</td>\n</tr>\n<tr>\n<td>Evasion</td>\n<td>2</td>\n<td>3</td>\n<td>4</td>\n<td>5</td>\n<td>8</td>\n</tr>\n<tr>\n<td>Armour</td>\n<td>20</td>\n<td>12</td>\n<td>7</td>\n<td>5</td>\n<td>2</td>\n</tr>\n<tr>\n<td>Volley</td>\n<td>12</td>\n<td>10</td>\n<td>8</td>\n<td>6</td>\n<td>4</td>\n</tr>\n<tr>\n<td>Prime</td>\n<td>12</td>\n<td>8</td>\n<td>6</td>\n<td>5</td>\n<td>3</td>\n</tr>\n<tr>\n<td>Energy</td>\n<td>90</td>\n<td>75</td>\n<td>45</td>\n<td>30</td>\n<td>18</td>\n</tr>\n<tr>\n<td>Systems</td>\n<td>30</td>\n<td>25</td>\n<td>15</td>\n<td>10</td>\n<td>6</td>\n</tr>\n<tr>\n<td>Maneuverability</td>\n<td>2</td>\n<td>3</td>\n<td>4</td>\n<td>5</td>\n<td>6</td>\n</tr>\n<tr>\n<td>Initiative Dice</td>\n<td>2d12</td>\n<td>2d10</td>\n<td>2d8</td>\n<td>2d6</td>\n<td>2d4</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 1000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 10
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

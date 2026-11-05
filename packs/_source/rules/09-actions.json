@@ -1,0 +1,150 @@
+{
+  "_id": "b300c1d08b201349",
+  "_key": "!journal!b300c1d08b201349",
+  "name": "Actions",
+  "pages": [
+    {
+      "_id": "f78457f3a61cf4f3",
+      "_key": "!journal.pages!b300c1d08b201349.f78457f3a61cf4f3",
+      "name": "Actions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Allocate Energy</td>\n<td><strong><em>Mandatory action on your turn, each round</em></strong>. This does not count towards your action limit.<br>Distribute <strong>Energy</strong> to each Position you want to take action. Any <strong>Energy</strong> dice that haven’t been used <strong><em>by the end of the round</em></strong> are lost. <strong>Energy</strong> dice <em>that have not been committed</em> are refreshed at the start of each round.</td>\n<td>—</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "b3d761859689cb24",
+      "_key": "!journal.pages!b300c1d08b201349.b3d761859689cb24",
+      "name": "Captain / Engineer",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Overwork the Crew</td>\n<td>Increase the available <strong>Energy</strong> dice. Roll all the available <strong>Energy</strong> dice; each success is an extra <strong>Energy</strong> dice you can distribute immediately. Doing so decrements <strong>Systems</strong> but does not provoke a roll on the Effects Table.</td>\n<td>Decrement <strong>Systems</strong></td>\n</tr>\n<tr>\n<td>Repair System</td>\n<td>Sacrifice a number of <strong>Energy</strong> dice equal to the <strong>Systems</strong> damage taken to increment the <strong>Systems</strong> back up, i.e., repair the system damage. You cannot exceed the maximum <strong>Systems</strong> rating for the ship with this action.</td>\n<td>Sacrifice [<strong>Systems</strong> damage]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "3f13c2962b683eb0",
+      "_key": "!journal.pages!b300c1d08b201349.3f13c2962b683eb0",
+      "name": "Sensors / Weapons Officer",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Analyse</td>\n<td>Analyse an opponent to get more information. Expend at will. Each success can provide you with one stat of your choice on the enemy Stat Sheet.</td>\n<td>Expend at will</td>\n</tr>\n<tr>\n<td>Target System</td>\n<td>Target a system on the enemy’s ship. Expend a number of <strong>Energy</strong> dice up to your <em>current</em> [<strong>Systems</strong>]. Each success is a dice that can be donated to the Pilot to <em>Attack</em>, although this action trades damage for effect.</td>\n<td>Expend up to [current <strong>Systems</strong>], Commit successes</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "e268173b8c52c9b5",
+      "_key": "!journal.pages!b300c1d08b201349.e268173b8c52c9b5",
+      "name": "Pilot / Helmsman",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Maneuver</td>\n<td>Maneuver the ship along one vector: Move in, Move out, Shift Sector. Each movement step sacrifices 1 <strong>Energy</strong> dice. You can sacrifice up to [<strong>Maneuverability</strong>] dice.<br>You can move twice per round as one action. You can split this action: perform a maneuver, take another action, perform a second maneuver.</td>\n<td>Sacrifice up to [<strong>Maneuverability</strong>]</td>\n</tr>\n<tr>\n<td>Attack</td>\n<td>Select a weapon type (<strong>Volley</strong> or <strong>Prime</strong>). Sacrifice a number of dice to fire. An attack triggers an <strong>Evasion</strong> roll from the target. Each of their success cancels one weapon damage, i.e., one of your sacrificed dice—see <em>@UUID[Compendium.ship-stats-card.rules.JournalEntry.7f367b83e50b3e23]{Defense}</em>.</td>\n<td>Sacrifice up to [<strong>Volley</strong>]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9b7667ba650a8fae",
+      "_key": "!journal.pages!b300c1d08b201349.9b7667ba650a8fae",
+      "name": "Mechanic / Carpenter",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 2
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<table>\n<thead>\n<tr>\n<th>Action</th>\n<th>Description</th>\n<th>Cost</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Repair Structural Damage</td>\n<td>Repair damage to the <strong>Structural Integrity</strong>. Expend <strong>Energy</strong> dice: 1 success equals 1 point of damage repaired.</td>\n<td>Expend at will</td>\n</tr>\n<tr>\n<td>Repair Critical Damage</td>\n<td>Repair damage from the Effects Table. Expend a number of <strong>Energy</strong> dice up to your <em>current</em> <strong>Systems</strong> value. At least one success repairs the damage—or at least patches it so that it is no longer an immediate threat to the ship and its crew. A failed roll has no effect.</td>\n<td>Expend [current <strong>Systems</strong>]</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "folder": null,
+  "sort": 900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ship-stats-card": {
+      "chapter": 9
+    },
+    "core": {
+      "sheetClass": "ship-stats-card.RulesJournalSheet"
+    }
+  }
+}

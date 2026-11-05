@@ -1,0 +1,82 @@
+{
+  "id": "ship-stats-card",
+  "title": "Ship Stats Card: Rules of Engagement",
+  "description": "<p>A d12-based abstract ship-to-ship combat mini-game: ship actors with linked tokens and a trackable stat sheet, example ships, a Tactical Graph scene, and the Rules of Engagement. Currently set up for the Draw Steel system.</p>",
+  "version": "0.3.2",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Federico Pieruccetti",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "scripts/module.mjs"
+  ],
+  "styles": [
+    {
+      "src": "styles/ssc-v4.css"
+    },
+    {
+      "src": "styles/rules.css"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "ship": {
+        "htmlFields": [
+          "notes"
+        ]
+      }
+    }
+  },
+  "packs": [
+    {
+      "name": "ships",
+      "label": "Example Ships",
+      "path": "packs/ships",
+      "type": "Actor",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "tables",
+      "label": "Ship Combat Tables",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "rules",
+      "label": "Rules of Engagement",
+      "path": "packs/rules",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "socket": true,
+  "flags": {}
+}

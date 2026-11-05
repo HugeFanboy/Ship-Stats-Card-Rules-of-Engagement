@@ -1,0 +1,119 @@
+<section class="ssc">
+  <nav class="sheet-toggle">
+    <button type="button" data-action="toggleEdit" data-mode="play" class="{{#unless editMode}}active{{/unless}}">{{localize "SSC.Ship.Play"}}</button>
+    {{#if canEdit}}<button type="button" data-action="toggleEdit" data-mode="edit" class="{{#if editMode}}active{{/if}}">{{localize "SSC.Ship.Edit"}}</button>{{/if}}
+  </nav>
+
+  {{!-- Structural Integrity --}}
+  <div class="si-block">
+    <div class="stat">
+      <label>{{localize "SSC.Ship.StructuralIntegrity"}}</label>
+      <span class="stat-value">{{si.current}} / {{si.max}}</span>
+      {{#if editMode}}
+      <input type="number" name="system.maxStructuralIntegrity" value="{{si.max}}" min="1" style="max-width:5rem" title="{{localize "SSC.Ship.StructuralIntegrityMaxHint"}}">
+      {{/if}}
+    </div>
+    <div class="si-bar"><div style="width: {{si.pct}}%"></div></div>
+  </div>
+
+  {{#if editMode}}
+  <div class="form-group">
+    <label>{{localize "SSC.Ship.Name"}}</label>
+    <input type="text" name="name" value="{{actor.name}}">
+  </div>
+  <div class="form-group">
+    <label>{{localize "SSC.Ship.Class"}}</label>
+    <select name="system.shipClass">
+      {{#each shipClasses as |cls|}}
+      <option value="{{cls.value}}" {{#if (eq cls.value ../actor.system.shipClass)}}selected{{/if}}>{{cls.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label>{{localize "SSC.Ship.IsNPC"}}</label>
+    <input type="checkbox" name="system.isNPC" {{checked actor.system.isNPC}}>
+  </div>
+  <div class="stat-groups">
+    {{#each groups as |group g|}}
+    <section>
+      <h3>{{group.title}}</h3>
+      {{#each group.stats as |stat s|}}
+      <div class="stat">
+        <label>{{stat.label}}</label>
+        <div class="form-controls">
+          {{#unless (eq stat.key "initiative")}}
+          <input type="number" name="system.{{stat.key}}" value="{{stat.base}}" min="0" style="max-width:5rem">
+          <label class="inline" title="{{localize "SSC.Ship.Mods.Hint"}}">
+            <input type="checkbox" name="system.statMods.{{stat.key}}.enabled" {{checked stat.modEnabled}}>
+            {{stat.label}} Mod
+          </label>
+          {{#if stat.modEnabled}}
+          <input type="number" name="system.statMods.{{stat.key}}.value" value="{{stat.modValue}}" style="max-width:4rem" title="±">
+          <input type="text" name="system.statMods.{{stat.key}}.text" value="{{stat.modText}}" placeholder="{{localize "SSC.Ship.Mods.Desc"}}">
+          {{/if}}
+          {{else}}
+          <input type="text" name="system.initiative" value="{{@root.initiative.formula}}" style="max-width:8rem" placeholder="2d8" title="Initiative formula, e.g. 2d8">
+          {{/unless}}
+        </div>
+      </div>
+      {{/each}}
+    </section>
+    {{/each}}
+  </div>
+
+  <div class="mods">
+    <h3>{{localize "SSC.Ship.Modifications"}}</h3>
+    {{#each actor.system.modifications as |mod m|}}
+    <div class="mod-row">
+      <input type="text" name="system.modifications.{{m}}" value="{{mod}}">
+      <button type="button" data-action="removeMod" data-index="{{m}}" class="icon"><i class="fas fa-trash"></i></button>
+    </div>
+    {{/each}}
+    <button type="button" data-action="addMod"><i class="fas fa-plus"></i> {{localize "SSC.Ship.Add"}}</button>
+  </div>
+
+  {{else}}
+  <div class="stat-groups">
+    {{#each groups as |group g|}}
+    <section>
+      <h3>{{group.title}}</h3>
+      {{#each group.stats as |stat s|}}
+      <div class="stat">
+        <label>{{stat.label}}</label>
+        <div>
+          {{#if (eq stat.key "initiative")}}
+          <span class="stat-value">{{@root.initiative.formula}}</span>
+          {{else}}
+          <span class="stat-value">{{stat.total}}</span>
+          {{/if}}
+          {{#if stat.modEnabled}}
+          <span class="stat-mod">({{stat.base}}{{#if stat.modValue}} {{#if (gt stat.modValue 0)}}+{{else}}{{stat.modValue}}{{/if}}{{/if}}{{#if stat.modText}}, {{stat.modText}}{{/if}})</span>
+          {{/if}}
+          {{#if (eq stat.key "maneuverability")}}
+            {{#if @root.isNPC}}<span class="stat-mod">→ {{@root.maneuver.effective}} (NPC)</span>{{/if}}
+          {{/if}}
+        </div>
+        <div class="form-controls">
+          <button type="button" class="icon" data-action="adjust" data-key="{{stat.key}}" data-delta="1" title="+1">▲</button>
+          <button type="button" class="icon" data-action="adjust" data-key="{{stat.key}}" data-delta="-1" title="-1">▼</button>
+          {{#if (eq stat.key "initiative")}}
+          <button type="button" class="icon ssc-roll" data-action="rollInitiative" title="{{localize "SSC.Ship.RollInitiative"}}"><i class="fas fa-dice-d12"></i></button>
+          <span class="stat-mod">{{@root.initiative.formula}}</span>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </section>
+    {{/each}}
+  </div>
+
+  {{#if mods.length}}
+  <div class="mods">
+    <h3>{{localize "SSC.Ship.Modifications"}}</h3>
+    <ul>
+      {{#each mods}}<li>{{this}}</li>{{/each}}
+    </ul>
+  </div>
+  {{/if}}
+  {{/if}}
+</section>

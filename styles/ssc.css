@@ -1,0 +1,173 @@
+/* Ship Stats Card: theme-agnostic (uses currentColor mixes so it works in light and dark Foundry themes). */
+.ssc-sheet {
+  display: flex; flex-direction: column; gap: 0.75rem; padding: 0.5rem;
+  box-sizing: border-box;
+  flex: 1 1 auto; min-height: 0; max-height: 100%;   /* fill the window and allow shrinking... */
+  overflow-y: auto;                                   /* ...scrolling inside when the window is shorter */
+}
+.ssc-sheet > * { flex-shrink: 0; }                    /* keep cards at natural height while scrolling */
+.ssc-sheet.is-edit { box-shadow: inset 0 0 0 2px var(--color-warm-2, #c90); border-radius: 8px; }
+
+/* Cards */
+.ssc-sheet .ssc-card {
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+}
+.ssc-sheet .ssc-card-title { margin: 0 0 0.25rem; font-size: 1.05rem; border: none; }
+
+/* Ship header */
+.ssc-sheet .ssc-ship-top { display: flex; align-items: center; gap: 0.75rem; }
+.ssc-sheet .ssc-portrait { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.ssc-sheet .ssc-portrait.is-editable { outline: 2px dashed var(--color-warm-2, #c90); cursor: pointer; }
+.ssc-sheet .ssc-title { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+.ssc-sheet .ssc-title input[type="text"] { width: 100%; font-size: 1.3rem; font-weight: bold; }
+.ssc-sheet .ssc-name { margin: 0; border: none; font-size: 1.7rem; }
+.ssc-sheet .ssc-badge { border: 1px solid color-mix(in srgb, currentColor 35%, transparent); border-radius: 999px; padding: 0.1rem 0.75rem; font-size: 0.85rem; }
+.ssc-sheet .ssc-mode-toggle { flex: 0 0 auto; width: auto; white-space: nowrap; }
+
+/* Structural Integrity */
+.ssc-sheet .ssc-hull { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.ssc-sheet .ssc-hull-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ssc-sheet .ssc-hull-label { display: flex; align-items: center; gap: 0.5rem; }
+.ssc-sheet .ssc-heart { color: oklch(0.6453 0.2603 2.47); }
+.ssc-sheet .ssc-hull-controls { display: flex; align-items: center; gap: 0.25rem; }
+.ssc-sheet .ssc-hull-value { min-width: 5rem; text-align: center; font-size: 1.2rem; font-weight: bold; }
+.ssc-sheet .ssc-bar { height: 0.75rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, currentColor 14%, transparent); }
+.ssc-sheet .ssc-bar > div { height: 100%; border-radius: 999px; background: linear-gradient(90deg, oklch(0.6453 0.2603 2.47 / 0.6), oklch(0.6453 0.2603 2.47)); transition: width 0.25s; }
+.ssc-sheet .ssc-hull-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.ssc-sheet .ssc-damage { color: #f87171; border-color: color-mix(in srgb, #f87171 55%, transparent); }
+.ssc-sheet .ssc-repair { color: #4ade80; border-color: color-mix(in srgb, #4ade80 55%, transparent); }
+
+/* Grouped stat cards */
+.ssc-sheet .ssc-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.ssc-sheet .ssc-stat-box {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, currentColor 7%, transparent);
+}
+.ssc-sheet .ssc-stat-head { display: flex; align-items: center; gap: 0.5rem; }
+.ssc-sheet .ssc-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 8px;
+  color: var(--ssc-color);
+  background: color-mix(in srgb, var(--ssc-color) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ssc-color) 50%, transparent);
+}
+.ssc-sheet .ssc-stat-label { opacity: 0.8; }
+.ssc-sheet .ssc-help { opacity: 0.55; font-size: 0.8rem; cursor: help; }
+.ssc-sheet .ssc-stat-body { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-height: 3rem; margin-top: 0.35rem; }
+.ssc-sheet .ssc-value { margin: 0; font-size: 1.9rem; line-height: 1.2; }
+.ssc-sheet .ssc-max { font-size: 0.95rem; opacity: 0.55; }
+.ssc-sheet .ssc-last-roll {
+  margin-left: 0.5rem; padding: 0.1rem 0.5rem; font-size: 1rem; border-radius: 4px; vertical-align: middle;
+  color: SpringGreen;
+  background: color-mix(in srgb, SpringGreen 15%, transparent);
+  border: 1px solid color-mix(in srgb, SpringGreen 50%, transparent);
+}
+.ssc-sheet .ssc-actions { display: flex; gap: 0.25rem; }
+.ssc-sheet .ssc-pool-edit { display: flex; align-items: center; gap: 0.25rem; }
+.ssc-sheet .ssc-committed { display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; opacity: 0.85; }
+
+/* Inputs and ghost buttons */
+.ssc-sheet .ssc-num { width: 3.6rem; text-align: center; }
+.ssc-sheet .ssc-num.is-wide { width: 5rem; }
+.ssc-sheet .ssc-icon-btn { width: 2rem; height: 2rem; padding: 0; line-height: 1; background: none; border: none; box-shadow: none; opacity: 0.75; }
+.ssc-sheet .ssc-icon-btn:hover { opacity: 1; background: color-mix(in srgb, currentColor 14%, transparent); }
+.ssc-sheet .ssc-icon-btn.is-large { width: 2.6rem; height: 2.6rem; font-size: 1.25rem; border-radius: 8px; }
+
+/* Modifications */
+.ssc-sheet .ssc-card textarea { width: 100%; resize: vertical; }
+.ssc-sheet .ssc-readonly { margin: 0; white-space: pre-wrap; }
+
+/* Applied effects */
+.ssc-sheet .ssc-effects-header { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.ssc-sheet .ssc-effects-header button { width: auto; white-space: nowrap; }
+.ssc-sheet .ssc-active-effects { margin: 0.4rem 0; padding-left: 1.1rem; font-size: 0.9rem; }
+.ssc-sheet .ssc-effects-list summary { cursor: pointer; font-weight: bold; margin: 0.25rem 0; }
+.ssc-sheet .ssc-effects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.15rem 0.75rem; }
+.ssc-sheet .ssc-effect { display: flex; align-items: center; gap: 0.35rem; }
+.ssc-sheet .ssc-effect input { margin: 0; flex: 0 0 auto; }
+.ssc-sheet .ssc-range { font-variant-numeric: tabular-nums; opacity: 0.65; font-size: 0.8rem; }
+
+@media (max-width: 520px) {
+  .ssc-sheet .ssc-groups { grid-template-columns: 1fr; }
+}
+
+/* Stat modifications + NPC switch */
+.ssc-sheet .ssc-mod { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed color-mix(in srgb, currentColor 20%, transparent); }
+.ssc-sheet .ssc-mod-toggle,
+.ssc-sheet .ssc-npc { display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer; }
+.ssc-sheet .ssc-mod input[type="checkbox"],
+.ssc-sheet .ssc-npc input[type="checkbox"] { margin: 0; }
+.ssc-sheet .ssc-half { margin-left: 0.5rem; font-size: 1.3rem; opacity: 0.55; }
+.ssc-sheet .ssc-mod-field { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 0.4rem; }
+.ssc-sheet .ssc-mod-field label { font-size: 0.8rem; font-weight: bold; opacity: 0.8; }
+.ssc-sheet .ssc-mod-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.ssc-sheet .ssc-mod-list li { padding: 0.4rem 0.6rem; border-radius: 6px; background: color-mix(in srgb, currentColor 7%, transparent); }
+.ssc-sheet .ssc-mod-list li::before { content: "•"; color: cyan; margin-right: 0.5rem; }
+.ssc-sheet .ssc-hint { opacity: 0.65; font-style: italic; }
+
+/* Lucide SVG icons (same set as the prototype) */
+.ssc-sheet .ssc-svg { width: 1.25rem; height: 1.25rem; flex: none; display: block; }
+.ssc-sheet button .ssc-svg { width: 1rem; height: 1rem; }
+.ssc-sheet .ssc-icon-btn { display: inline-flex; align-items: center; justify-content: center; }
+.ssc-sheet .ssc-icon-btn .ssc-svg { width: 1.1rem; height: 1.1rem; }
+.ssc-sheet .ssc-icon-btn.is-large .ssc-svg { width: 1.25rem; height: 1.25rem; }
+.ssc-sheet .ssc-icon-btn.is-dice .ssc-svg { width: 2rem; height: 2rem; }
+.ssc-sheet .ssc-help { display: inline-flex; align-items: center; }
+.ssc-sheet .ssc-help .ssc-svg { width: 0.95rem; height: 0.95rem; }
+.ssc-sheet .ssc-heart { display: inline-flex; }
+.ssc-sheet .ssc-damage, .ssc-sheet .ssc-repair, .ssc-sheet .ssc-effects-header button { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; }
+
+/* Initiative modification, e.g. "2d6 +1" */
+.ssc-sheet .ssc-init-mod { margin-left: 0.4rem; font-size: 1.3rem; color: var(--ssc-color); opacity: 0.9; }
+
+/* Applied effects that change a stat */
+.ssc-sheet .ssc-effect-notes { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin-top: 0.35rem; font-size: 0.75rem; color: #f59e0b; }
+.ssc-sheet .ssc-stat-box.is-disabled .ssc-value { opacity: 0.4; text-decoration: line-through; }
+
+/* Rules journal pages (Rules of Engagement compendium) */
+.ssc-note { margin: 0.75rem 0; padding: 0.4rem 0.85rem; border-left: 4px solid #3b82f6; border-radius: 4px; background: color-mix(in srgb, #3b82f6 12%, transparent); }
+.ssc-note > p { margin: 0.3rem 0; }
+blockquote.ssc-example { margin: 0.75rem 0; padding: 0.4rem 0.85rem; border-left: 4px solid color-mix(in srgb, currentColor 40%, transparent); background: color-mix(in srgb, currentColor 5%, transparent); font-style: italic; }
+.ssc-graphs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 0.75rem 0; }
+.ssc-graphs figure { flex: 1 1 240px; max-width: 420px; margin: 0; text-align: center; }
+.ssc-graphs img { width: 100%; height: auto; border-radius: 8px; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.ssc-graphs img.is-dark { background: #000; }
+.ssc-graphs img.is-light { background: #fff; }
+.ssc-graphs figcaption { font-size: 0.8rem; opacity: 0.7; }
+
+/* Effects header buttons */
+.ssc-sheet .ssc-effects-buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: flex-end; }
+.ssc-sheet .ssc-clear-effects { color: #f87171; border-color: color-mix(in srgb, #f87171 55%, transparent); }
+.ssc-sheet .ssc-clear-effects, .ssc-sheet .ssc-effects-buttons button { display: inline-flex; align-items: center; gap: 0.4rem; width: auto; white-space: nowrap; }
+
+/* Tabs */
+.ssc-sheet .ssc-tabs { display: flex; gap: 0.25rem; border-bottom: 1px solid color-mix(in srgb, currentColor 25%, transparent); }
+.ssc-sheet .ssc-tabs button { flex: 0 0 auto; width: auto; padding: 0.35rem 1rem; border: none; border-bottom: 3px solid transparent; border-radius: 0; background: none; box-shadow: none; opacity: 0.7; }
+.ssc-sheet .ssc-tabs button.is-active { opacity: 1; font-weight: bold; border-bottom-color: var(--color-warm-2, #c90); }
+
+/* Actions tab */
+.ssc-sheet .ssc-energy-numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; text-align: center; }
+.ssc-sheet .ssc-energy-numbers span { display: block; font-size: 0.75rem; text-transform: uppercase; opacity: 0.75; }
+.ssc-sheet .ssc-energy-numbers strong { font-size: 1.7rem; }
+.ssc-sheet .ssc-energy-numbers .is-remaining strong { color: #facc15; }
+.ssc-sheet .ssc-energy-numbers .is-over strong { color: #f87171; }
+.ssc-sheet .ssc-energy-summary .ssc-hint { margin: 0.5rem 0; font-size: 0.8rem; }
+.ssc-sheet .ssc-role-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ssc-sheet .ssc-role-energy { display: flex; align-items: center; gap: 0.25rem; }
+.ssc-sheet .ssc-role-energy label { font-size: 0.75rem; text-transform: uppercase; opacity: 0.75; margin-right: 0.25rem; }
+.ssc-sheet .ssc-all-btn { width: auto; padding: 0 0.6rem; height: 2rem; line-height: 1; }
+.ssc-sheet .ssc-actions-list { list-style: none; margin: 0.25rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.ssc-sheet .ssc-action { padding: 0.5rem 0.75rem; border-radius: 8px; background: color-mix(in srgb, currentColor 7%, transparent); }
+.ssc-sheet .ssc-action.is-used { opacity: 0.55; }
+.ssc-sheet .ssc-action.is-disabled { opacity: 0.45; }
+.ssc-sheet .ssc-action-head { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+.ssc-sheet .ssc-action-head input { margin: 0; flex: none; }
+.ssc-sheet .ssc-cost { margin-left: auto; font-size: 0.75rem; opacity: 0.75; text-align: right; }
+.ssc-sheet .ssc-roll-btn { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.4rem; width: auto; height: auto; padding: 0.2rem 0.6rem; line-height: 1.2; }
+.ssc-sheet .ssc-roll-btn svg { width: 1rem; height: 1rem; }
+.ssc-sheet .ssc-action-text { margin: 0.3rem 0 0; font-size: 0.85rem; }

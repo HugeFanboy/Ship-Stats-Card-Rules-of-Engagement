@@ -1,0 +1,12 @@
+{
+  "name": "ship-stats-card",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:packs": "node build/generate-tables.mjs && node build/generate-rules.mjs && node build/build-packs.mjs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.0",
+    "markdown-it": "^14.3.2"
+  }
+}

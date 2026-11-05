@@ -8,8 +8,9 @@
  */
 import generic from "./generic.mjs";
 import drawSteel from "./draw-steel.mjs";
+import projectFU from "./projectfu.mjs";
 
-export const ADAPTERS = Object.fromEntries([drawSteel].map((a) => [a.id, a]));
+export const ADAPTERS = Object.fromEntries([drawSteel, projectFU].map((a) => [a.id, a]));
 
 /** The adapter for the world's game system, or the generic one when the system has none. */
 export function systemAdapter() {

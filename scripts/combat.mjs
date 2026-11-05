@@ -8,6 +8,7 @@
 import { MODULE_ID, SHIP_TYPE, DEFAULT_TN, RANGES } from "./constants.mjs";
 import { effectForRoll } from "./effects.mjs";
 import { ROLES } from "./actions.mjs";
+import { systemAdapter } from "./systems/index.mjs";
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -296,8 +297,8 @@ export function warnHull(actor, damage, hullAfter) {
 /*  Sockets, Combat tracker and turn start                              */
 /* ------------------------------------------------------------------ */
 
-/** Draw Steel's own initiative mode (side-based, counter initiative): leave initiative alone there. */
-const usesSystemInitiative = () => Boolean(game.combats?.isDefaultInitiativeMode);
+/** Some systems run their own initiative (e.g. Draw Steel's side-based mode): leave initiative alone there. */
+const usesSystemInitiative = () => systemAdapter().usesSystemInitiative();
 
 export function registerCombat() {
   game.socket.on(SOCKET, async (data) => {
@@ -362,8 +363,8 @@ const recentTurns = new Map();
 
 /**
  * A ship's turn begins: clear its per-turn Energy and actions, then ask for the new allocation.
- * Called from the combat hooks (GM client) and from the ship's own _onStartTurn, which Draw Steel's
- * combat calls; the guard keeps the two routes from both firing.
+ * Called from the combat hooks (GM client) and from the ship's own _onStartTurn, which some systems'
+ * combat calls (see scripts/systems/); the guard keeps the two routes from both firing.
  */
 export async function startShipTurn(actor, { prompt = true } = {}) {
   if (actor?.type !== SHIP_TYPE || !actor.isOwner) return;

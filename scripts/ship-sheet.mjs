@@ -61,15 +61,6 @@ export default class ShipSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     body: { template: "modules/ship-stats-card/templates/ship-sheet.hbs", scrollable: [""] }
   };
 
-  /** Other systems (Draw Steel) ask sheets to re-render parts that do not exist here; fall back to ours. */
-  async render(options = {}, _options = {}) {
-    if (options && typeof options === "object" && Array.isArray(options.parts)) {
-      const parts = options.parts.filter((p) => p in ShipSheet.PARTS);
-      options = { ...options, parts: parts.length ? parts : Object.keys(ShipSheet.PARTS) };
-    }
-    return super.render(options, _options);
-  }
-
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     const system = this.document.system;

@@ -1,6 +1,5 @@
 import { EFFECTS, EFFECT_KEYS } from "./effects.mjs";
 import { ACTION_KEYS } from "./actions.mjs";
-import { startShipTurn } from "./combat.mjs";
 
 const { SchemaField, NumberField, StringField, HTMLField, SetField, BooleanField } = foundry.data.fields;
 
@@ -152,13 +151,6 @@ export default class ShipData extends foundry.abstract.TypeDataModel {
     this.energy.allocated = Object.values(this.allocation).reduce((sum, n) => sum + n, 0);
     this.energy.unallocated = Math.max(0, this.energy.available - this.energy.allocated);
   }
-
-  /* Draw Steel's combat calls these on every combatant's actor, so ships must answer them. */
-  get combat() { return { turns: 1 }; }
-  get isMinion() { return false; }
-  startCombat() {}
-  _onStartTurn() { return startShipTurn(this.parent); }
-  _onEndTurn() {}
 
   /** Changing the ship class loads that class's default stats (Example Ships table), at full strength. */
   async _preUpdate(changes, options, user) {

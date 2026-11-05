@@ -9,7 +9,7 @@ The ship actor type (`ship-stats-card.ship`) is declared in `module.json` and re
 | --- | --- |
 | `scripts/systems/generic.mjs` | Any system without its own adapter (core Combat tracker and initiative) |
 | `scripts/systems/draw-steel.mjs` | Draw Steel (combat hooks on the actor, sheet re-render fix, side-based initiative) |
-| `scripts/systems/projectfu.mjs` | Project FU (Fabula Ultima); currently the same as the generic adapter |
+| `scripts/systems/projectfu.mjs` | Project FU (Fabula Ultima); currently the same as the generic adapter. Example Ships compendium: `ships-projectfu` |
 
 To add a system:
 

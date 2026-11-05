@@ -55,6 +55,18 @@
       "flags": {}
     },
     {
+      "name": "ships-projectfu",
+      "label": "Example Ships",
+      "path": "packs/ships-projectfu",
+      "type": "Actor",
+      "system": "projectfu",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
       "name": "tables",
       "label": "Ship Combat Tables",
       "path": "packs/tables",

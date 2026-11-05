@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+- The ship actor type is now system-agnostic: `scripts/ship-actor.mjs` registers it (data model, token bars, sheet) in any game system.
+- Everything specific to one game system lives in its own adapter file under `scripts/systems/` (`draw-steel.mjs`; `generic.mjs` is used for systems without one). The Draw Steel combat hooks, sheet re-render fix and side-based initiative check moved there, unchanged.
+- The pack build compiles the Example Ships into every `ships` / `ships-<system-id>` Actor pack listed in module.json, so a new system gets the compendium with one module.json entry.
+- Added a Project FU adapter (`scripts/systems/projectfu.mjs`), starting as a copy of the generic one, and an Example Ships compendium for Project FU worlds (`ships-projectfu`).
+
 ## 0.3.2
 - Clean-up, no behaviour changes: shared constants (module id, ship type, target number, ranges) live in one file; the Effects Table roll and the hull-damage reminders are single shared functions; effect lookups use a map; repeated "mark action used" code merged.
 

@@ -1,6 +1,5 @@
-import { MODULE_ID, SHIP_TYPE } from "./constants.mjs";
-import ShipData from "./ship-data.mjs";
-import ShipSheet from "./ship-sheet.mjs";
+import { MODULE_ID } from "./constants.mjs";
+import { registerShipActor } from "./ship-actor.mjs";
 import { registerTacticalGraphSettings } from "./tactical-graph.mjs";
 import { registerRulesCompendium } from "./rules-compendium.mjs";
 import { registerCombat, startShipTurn } from "./combat.mjs";
@@ -20,19 +19,7 @@ Hooks.once("init", () => {
     scope: "client", config: true, type: Boolean, default: true
   });
 
-  CONFIG.Actor.dataModels[SHIP_TYPE] = ShipData;
-
-  // Attributes selectable as token bars / values.
-  CONFIG.Actor.trackableAttributes[SHIP_TYPE] = {
-    bar: ["structure", "systems", "armour", "prime"],
-    value: ["evasion", "volley", "maneuverability", "energy.committed"]
-  };
-
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, MODULE_ID, ShipSheet, {
-    types: [SHIP_TYPE],
-    makeDefault: true,
-    label: "SHIPSTATS.SheetLabel"
-  });
+  registerShipActor();
 });
 
 /* ------------------------------------------------------------------ */

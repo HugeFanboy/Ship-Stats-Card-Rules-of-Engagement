@@ -1,8 +1,8 @@
 {
   "id": "ship-stats-card",
   "title": "Ship Stats Card: Rules of Engagement",
-  "description": "<p>A d12-based abstract ship-to-ship combat mini-game: ship actors with linked tokens and a trackable stat sheet, example ships, a Tactical Graph scene, and the Rules of Engagement. Currently set up for the Draw Steel system.</p>",
-  "version": "0.3.2",
+  "description": "<p>A d12-based abstract ship-to-ship combat mini-game: ship actors with linked tokens and a trackable stat sheet, example ships, a Tactical Graph scene, and the Rules of Engagement. Works in any game system; Draw Steel has dedicated support.</p>",
+  "version": "0.4.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -48,6 +48,18 @@
       "path": "packs/ships",
       "type": "Actor",
       "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ships-projectfu",
+      "label": "Example Ships",
+      "path": "packs/ships-projectfu",
+      "type": "Actor",
+      "system": "projectfu",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
